@@ -10,6 +10,11 @@ h2 {
 	margin: 5 5 5 40;
 }
 
+td {
+	vertical-align: top;
+	text-align: center;
+}
+
 .backLink {
 	float: left;
 }
