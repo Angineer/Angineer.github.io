@@ -34,10 +34,10 @@
 	</div>
 	<hr>
 	<div class="project">
-                <h3 id="Clock">Binary Clock</h3>
-                <div class="subProject">A binary clock is just like a regular clock, but it displays the time in
+        <h3 id="Clock">Binary Clock</h3>
+        <div class="subProject">A binary clock is just like a regular clock, but it displays the time in
 			a binary (or in my case a psuedo-binary) format.
-                </div>
+        </div>
 		<div class="subProject"><h4>Requirements:</h4>
 			<ul>
 				<li>LED display</li>
@@ -67,36 +67,36 @@
 				<li>I was building this as a permanent fixture, so I soldered it to a PCB once I had it working on the breadboard and placed it inside a project box from Radio Shack</li>
 				<li>I used a basic wall wort AC adapter for powering the Arduino and the LED drivers</li>
 			</ul>
-			<p>To read the clock, you have to be able to convert the numbers from binary into decimal. My clock has a "Binary Coded Decimal" setup. A tutorial on what that means and how to read it is here: <a href=http://www.wikihow.com/Read-a-Binary-Clock">WikiHow</a></p>
+			<p>To read the clock, you have to be able to convert the numbers from binary into decimal. My clock has a "Binary Coded Decimal" setup. A tutorial on what that means and how to read it is here: <a href="http://www.wikihow.com/Read-a-Binary-Clock">WikiHow</a></p>
 
-<p>The DS3234 is a very cool chip. It is accurate enough that, using this design, I never foresee having to reset it. Because I used the breakout board from Sparkfun that includes a backup battery, I can also unplug the clock and not worry about losing the time. Simply plug it back in and it will have the current time on it. The board is a little expensive for such a simple project, but I installed it using a socket so if I ever decide to use it for another project, I can repurpose it.</p>
+			<p>The DS3234 is a very cool chip. It is accurate enough that, using this design, I never foresee having to reset it. Because I used the breakout board from Sparkfun that includes a backup battery, I can also unplug the clock and not worry about losing the time. Simply plug it back in and it will have the current time on it. The board is a little expensive for such a simple project, but I installed it using a socket so if I ever decide to use it for another project, I can repurpose it.</p>
 
-<p>One bad thing about this design, however, is that I did not allow the user to have any inputs without taking the entire clock apart. This means that setting/adjusting the time does require popping out the DS3234 and reprogramming it with a separate Arduino.</p>
+			<p>One bad thing about this design, however, is that I did not allow the user to have any inputs without taking the entire clock apart. This means that setting/adjusting the time does require popping out the DS3234 and reprogramming it with a separate Arduino.</p>
 
-<h4>Log</h4>
-<h5>June 2013</h5>
-<p>After having the clock around for a while, I have had some time to reflect on the design. There are a few drawbacks to the way that I built it:</p>
-<ul>
-	<li>The time must be set manually. This is fine for most of the year, as the DS3234 keeps time extremely accurately. However, whenever daylight savings time changes, I have to pop the box open and change things forward or backward an hour. I'll probably add a button to do this in the future</li>
-	<li>The brightness of the LEDs prevents me from keeping this anywhere near the bedroom, as it's too bright to sleep next to. I think this could easily be fixed with a potentiometer that would look nice on the front of the box.</li>
-</ul>
-<p>In general, I am very pleased with the outcome. It makes a great clock and piece of art for friends who don't have any interest in learning binary.</p>
+		<h4>Log</h4>
+		<h5>June 2013</h5>
+		<p>After having the clock around for a while, I have had some time to reflect on the design. There are a few drawbacks to the way that I built it:</p>
+		<ul>
+			<li>The time must be set manually. This is fine for most of the year, as the DS3234 keeps time extremely accurately. However, whenever daylight savings time changes, I have to pop the box open and change things forward or backward an hour. I'll probably add a button to do this in the future</li>
+			<li>The brightness of the LEDs prevents me from keeping this anywhere near the bedroom, as it's too bright to sleep next to. I think this could easily be fixed with a potentiometer that would look nice on the front of the box.</li>
+		</ul>
+		<p>In general, I am very pleased with the outcome. It makes a great clock and piece of art for friends who don't have any interest in learning binary.</p>
 
-<h5>September 2012</h5>
-<p>I went and picked out a project box to put it in, so I'm ready to start soldering things to the PCB. I'm not going to say that I'm a master solderer or circuit designer, so it's a little bit messy. But hey, it works:</p>
+		<h5>September 2012</h5>
+		<p>I went and picked out a project box to put it in, so I'm ready to start soldering things to the PCB. I'm not going to say that I'm a master solderer or circuit designer, so it's a little bit messy. But hey, it works:</p>
 
-<img src=pictures/Clock_Guts.jpg>
+		<img src=pictures/Clock_Guts.jpg>
 
-<p>Drilled a few holes, added a strain relief, and viola: a finished binary clock. It's now happily telling time on my desk at home.</p>
+		<p>Drilled a few holes, added a strain relief, and viola: a finished binary clock. It's now happily telling time on my desk at home.</p>
 
-<img src=pictures/Clock_Final.jpg>
+		<img src=pictures/Clock_Final.jpg>
 
-<h5>August 2012</h5>
-<p>All the electrical parts are in and I have them attached to a breadboard for testing/coding. Here's a picture of the setup (you can see the different components laid out, and the seconds and minutes working):</p>
+		<h5>August 2012</h5>
+		<p>All the electrical parts are in and I have them attached to a breadboard for testing/coding. Here's a picture of the setup (you can see the different components laid out, and the seconds and minutes working):</p>
 
-<img src=pictures/Clock_Breadboard.jpg>
+		<img src=pictures/Clock_Breadboard.jpg>
 
-<p>Here is my code: <a href=/resources/Clock_Run.ino>Code</a></p>
+		<p>Here is my code: <a href=/resources/Clock_Run.ino>Code</a></p>
 	</div>
 	<hr>
 	<div class="project">
@@ -107,7 +107,28 @@
 	<hr>
 	<div class="project">
 		<h3 id="HTPC">Home Theater PC</h3>
-		<div class="subproject">I embarked on building my own PC for gaming in the living room.
+		<div class="subproject">
+			<p>For this project, I embarked on building my own PC for gaming in the living room. I had always been a console person when I was younger, but the idea of being able to tweak my computer to do more interesting things became more of a priority as I got older and could afford it.</p>
+		</div>
+		<div class="subproject"><h4>Requirements:</h4>
+			<ul>
+				<li>Be able run high end video games with moderately good graphics</li>
+				<li>Fit within a $600-800 budget</li>
+			</ul>
+		</div>
+		<div class="subproject"><h4>References:</h4>
+		</div>
+		<div class="subproject"><h4>Design:</h4>
+			<p>I originally started with just the idea of a gaming computer. As time went on, I gradually developed an interest in a full-featured entertainment system that would interface with the TV and stereo and feature networked media storage and control.</p>
+			<p>When I had done a little bit of research, I gradually started buying parts. These were my original specs:</p>
+			<ul>
+				<li>Rosewill challenger case</li>
+				<li>ASRock z7 p67 motherboard</li>
+				<li>Intel i5 2500K CPU</li>
+				<li>Coolermaster Hyper 212 CPU cooler</li>
+				<li>8 GB GSkill RAM</li>
+				<li>NVidia GTX 450 GPU</li>
+			</ul>
 		</div>
 	</div>
 	<hr>
@@ -129,3 +150,22 @@
 	</div>
 </body>
 </html>
+
+<!--
+	<div class="project">
+		<h3 id=""></h3>
+		<div class="subproject">
+		</div>
+		<div class="subproject">Youtube:
+			<ul>
+				<li><a href="http://youtu.be/JkxERz-3ysc">The steel box design</a></li>
+			</ul>
+		</div>
+		<div class="subproject"><h4>Requirements:</h4>
+		</div>
+		<div class="subproject"><h4>References:</h4>
+		</div>
+		<div class="subproject"><h4>Design:</h4>
+		</div>
+	</div>
+-->
