@@ -15,6 +15,7 @@
 		<li><a href="#Robot">Service Robot</a></li>
 		<li><a href="#Solar">Solar Collector</a></li>
 		<li><a href="#Treb">Trebuchet</a></li>
+		<li><a href="#Rocket">Water Bottle Rockets</a></li>
 	</ul>
 	<hr>
 	<div class="project">
@@ -121,6 +122,7 @@
 		<div class="subproject"><h4>References:</h4>
 			<ul>
 				<li><a href="http://www.newegg.com/">Newegg</a></li>
+				<li><a href="http://www.musicpd.org">Music Player Daemon</a></li>
 			</ul>
 		</div>
 		<div class="subproject"><h4>Design Log:</h4>
@@ -139,21 +141,30 @@
 			<h5>August 14, 2014</h5>
 			<p>With the main components of the gaming computer completed, I have started to work on the integration into a larger, interconnected home theater system. Currently, the gaming computer is hooked up to the television, and we can use it for gaming and watching content on the internet. With the current work that Valve is putting into making Steam living room-friendly, it works out quite nicely.</p>
 			<p>I'm thinking that I want to set up a server to operate as a NAS so that content can be added/removed from anywhere on the network and then also streamed to any devices in the house. I recently switched my website hosting from a raspberry pi to GitHub pages, so I think I may reclaim the little guy for this project.</p>
+			<h5>November 4, 2014</h5>
+			<p>I now have the NAS setup on my Raspberry Pi using an external hard drive and a samba share, and it generally works great. In addition, I have a little application running on the Pi that I learned about when I was a member of Solid State Depot, the Boulder hackerspace. It's called <a href="http://www.musicpd.org/">MPD</a>. It allows you to set up a music server that can play music locally or stream it to any other computer on the network, and can be controlled from any computer on the network.</p>
+			<p>I'm starting to feel like I want to use my desktop for more things that actually require a desk, so I'm thinking of finding a smaller, less-powerful computer to hook up to the TV. With Steam, I can still stream to the TV for games, but then I'll be able to work on spreadsheets in a more comfortable setting. However, it's going to have to wait until I find a really good deal on another computer.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
 	<hr>
 	<div class="project">
 		<h3 id="Spud">Potato Cannon</h3>
-		<div class="subproject">A popular device for launching potatoes into the sky.
+		<div class="subproject">A popular device for launching potatoes into the sky. This project was started around the same time as the <a href="#Treb">trebuchet</a> (do you see a theme?).
 		</div>
 		<div class="subproject"><h4>Requirements:</h4>
+			<ul>
+				<li>Shoot potatoes</li>
+			</ul>
 		</div>
 		<div class="subproject"><h4>References:</h4>
+			<ul>
+				<li><a href="http://cdn.makezine.com/make/wp_spudgun.pdf">Make Magazine</a></li>
+			</ul>
 		</div>
 		<div class="subproject"><h4>Design Log:</h4>
-			<h5>Date</h5>
-			<p>Entry</p>
+			<p>I had seen a number of potato cannons before with slight variations, but we based our design on one in Make Magazine. There were two differences in ours: we didn't use clear plastic and we didn't use a stun gun for the ignition. For the body, we used schedule 40 PVC, but we made the entire thing black.</p>
+			<p>For the ignition, Make used a stun gun. However, we didn't have one lying around, so we were having a hard time figuring out how to do it on the cheap. We tried a variety of different electrical sources, but they all seemed to be putting through too much current and actually left residue on the electrodes. Finally, we went to the hardware store and splurged on a gas grill sparker (the manual, push-button kind). It was just the ticket, and ignited the fuel with pretty good consistency.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
@@ -170,16 +181,21 @@
 		<div class="subproject"><h4>References:</h4>
 			<ul>
 				<li><a href="http://www.clemson.edu/irrig/equip/ram.htm">Clemson University design</a></li>
+				<li><a href="http://youtu.be/r8bAmm3fzXM">An initial test run</a></li>
 			</ul>
 		</div>
 		<div class="subproject"><h4>Design Log:</h4>
-			<p>I based my design entirely on the Clemson University site, so I relied on them to do all the calculations beforehand. I am building my version out of PVC.</p>
+			<p>I based my design entirely on the Clemson University site, so I relied on them to do all the calculations beforehand. I built my version out of PVC. The only difference is in the swing check valve. When buying parts, I couldn't find a <i>swing</i> check valve, so I bought a <i>spring</i> check valve and took the spring out. Because it was brass, the weight of the valve kept it open in a vertical position so it could basically act just like the swing valve.</p>
 			<h5>October 8, 2014</h5>
 			<p>I got the last few pieces from the hardware store, welded and screwed everything together, and have something that looks like the diagram:</p>
 			<img src="pictures/Ram.png">
-			<p>As a test, I set the ram up on a hill at my parent's farm. The inlet water was being provided by a garden hose, so the water level and pressure were a little hard to control, but I managed to get it running:</p>
+			<p>As a test, I set the ram up on a hill at my parent's farm. The inlet water was being provided by a garden hose, so the water level and pressure were a little hard to control, but I managed to get it running. It's hard to see in these pictures, but the inlet hose is at the top of the ladder and the outlet hose is way up above in the red circle.</p>
 			<img src="pictures/RamTest1.png">
 			<img src="pictures/RamTest2.png">
+			<p>After playing with the brass valve and trying to get a rhythm going, I realized that it was too difficult for the water to close the valve (probably because it wasn't an actual swing valve). To solve this, I used a small spring (smaller than the one it came with), which made the distance the valve had to move a little shorter. You can see a video of it working in the References.</p>
+			<h5>October 18, 2014</h5>
+			<p>Westhampton has an annual Fall Festival and this year my grandparents (who were organizing it) asked me to bring the ram pump to show off. I set the pump up with a big tank on the inlet side, rather than a garden hose, which helped demonstrate the fact that the pump runs entirely on gravitational energy. I did notice that, because the setup was different from at the farm, I had to adjust the brass valve to open more easily. I did this by simply taking out the small spring that I had used and letting it operate entirely by gravity.</p>
+			<p>The ram was a pretty big hit and I think that people who had never heard of such a thing before were pretty impressed.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
@@ -218,13 +234,16 @@
 		<div class="subproject">I wanted to build a solar hot water system to learn about solar engineering and to reduce the monthly hot water bill.
 		</div>
 		<div class="subproject"><h4>Requirements:</h4>
+			<ul>
+				<li>Heat water using solar energy</li>
+				<li>Connect with a residential hot water source system</li>
+				<li>Use as little non-solar energy as possible</li>
+			</ul>
 		</div>
 		<div class="subproject"><h4>References:</h4>
 		</div>
 		<div class="subproject"><h4>Design Log:</h4>
 			<p>The project started out as a parabolic collector, but evolved over the course of the experience to an easier form factor.</p>
-			<h5>Date</h5>
-			<p>Entry</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
