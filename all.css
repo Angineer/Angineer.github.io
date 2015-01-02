@@ -16,6 +16,10 @@ td {
 	text-align: center;
 }
 
+.mainHeading {
+	padding: 0;
+}
+
 .backLink {
 	float: left;
 }
