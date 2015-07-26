@@ -259,6 +259,10 @@
 			<h5>April 28 2015</h5>
 			<p>As promised, it is working again: <a href="https://youtu.be/0LgY9al-h9I">Robot Test</a>.</p>
 			<p>I rewired the driver circuit and hooked up the two servos, plus I did some organizing of components in the box and added some strain reliefs. I also included a key switch, so you have to have the keys to turn it on (and off). I also bought a battery charger so I can have some extended testing sessions without worrying about draining it down too low for long periods at a time.</p>
+			<h5>July 26, 2015</h5>
+			<p>More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA-printed steering assembly tends to melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.</p>
+			<p>I have overcome the power issue by rearranging how I ran the power through the system. I originally had a switching voltage rectifier to bring the 12V battery down to 6V, which I was going to use to power the servos and the Arduino. I added a lot of capacitors at various points throughout to try to eliminate the noise in that circuit, but couldn't beat it. It then occurred to me to try to run the 12V directly into the Arduino, then run the servos off the Arduino's 5V pin. As it turns out, that was exactly what I needed.</p>
+		<p>As for the melted steering, I'll have to wait until I can print a new one. I have some ideas about redesigning it, but I need to think more about how I want to do that.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
