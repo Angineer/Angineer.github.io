@@ -243,12 +243,13 @@
 		</div>
 		<div class="subproject"><h4>Design Log:</h4>
 			<p>I originally started this as a project with my college friends. In the beginning, we wanted to fund it by redeeming containers on campus (as there was a huge surplus of them). For the most part, we were successful. We bought a set of basic parts, including the chassis, servos, DC motors, battery, and some of the power management and motor driver circuits just from the cash we got redeeming cans and bottles. However, the robot never really got to a functional point while I was in college.</p>
-			<p>After I graduated, however, I got the time to design and built more of the steering hardware, and the robot starting driving around: <a href="http://youtu.be/JkxERz-3ysc">The steel box design</a></p>
+			<p>After I graduated (2011), I got the time to design and built more of the steering hardware, and the robot starting driving around: <a href="http://youtu.be/JkxERz-3ysc">The steel box design</a></p>
 			<p>The main issue that came up next was the weight of the robot. The chassis we had started with was a gigantic steel box that put some strain on the driving system. In addition, the steering hardware was fairly shoddy.</p>
 			<h5>April 24 2014</h5>
 			<p>I'm finally getting back into working on this project. The 2 areas I'm focused on right now are getting the steering hardware built and finalizing the circuitry. Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:</p>
 			<img src="pictures/MotorTest.png">
 			<img src="pictures/PCBMotorCircuit.png">
+			<p>You can also see that the new chassis is a plastic box. This is both much lighter than the steel one and allows you to see what's happening inside, which is kind of cool.</p>
 			<h5>March 13 2015</h5>
 			<p>Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've designed and 3D printed a steering assembly:</p>
 			<img src="pictures/Steering1.png">
@@ -263,6 +264,9 @@
 			<p>More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA-printed steering assembly tends to melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.</p>
 			<p>I have overcome the power issue by rearranging how I ran the power through the system. I originally had a switching voltage rectifier to bring the 12V battery down to 6V, which I was going to use to power the servos and the Arduino. I added a lot of capacitors at various points throughout to try to eliminate the noise in that circuit, but couldn't beat it. It then occurred to me to try to run the 12V directly into the Arduino, then run the servos off the Arduino's 5V pin. As it turns out, that was exactly what I needed.</p>
 		<p>As for the melted steering, I'll have to wait until I can print a new one. I have some ideas about redesigning it, but I need to think more about how I want to do that.</p>
+		<h5>August 30, 2015</h5>
+		<p>I've re-printed the steering. In addition to printing out new parts, the size of the connector piece (what would be the rack in an equivalent rack and pinion design) was too small, so I kludged together a new one out of the multiple prototypes that I had printed already.</p>
+		<p>With the power and steering figured out, I can finally play around with the programming to see what I can make the robot do. I currently have it performing a basic obstacle-avoidance algorithm that seems to work pretty well. It can drive itself around a room and generally not run into anything. However, I've noticed a different problem now. After a minute or two, the Arduino starts to reset every few seconds. If I turn the power off, wait a minute, and then turn it back on, it will run again for a minute and then do the same thing. I think that either the battery is getting worn out or I'm tripping a thermal shutdown--perhaps my power management solution is not really what I needed after all.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
@@ -320,6 +324,7 @@
 				<li>Adjusting the angle so that the collector was facing the sun directly at noon was a big chore, as it had to be done daily and I hadn't come up with a good system for doing it</li>
 			</ol>
 			<p>Also, because I was building this on the cheap, I had used some basic styrofoam for some of the insulation. As it turns out, the concentrated light was getting so hot that it melted the styrofoam into a twisted brown mess.</p>
+			<p>So, in order to simplify things, I decided to convert this project into a flat plate collector. Basically, instead of concentrating the light into a single line, the pipe captures the energy by spreading out over a larger area and then recombining at the end. This type is quite common, especially for DIY setups. It eliminates the need for the daily adjustment because it is less impacted by the movement of the sun, and it allows the box to be more compact and easier to insulate. On the flip side, it is slightly less interesting and requires that you build a manifold. However, I thought that the benefits of having a collector that works well outweighed the potential scientific interest.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
@@ -380,7 +385,7 @@
 			<h5>August 29, 2015</h5>
 			<p>The trebuchet has once again fallen into disrepair and been turned back into scrap parts. The only piece remaining is the throwing arm:</p>
 			<img src="pictures/NewTrebArm.png">
-			<p>More than any other project I have worked on, this one is the closest to my heart. It taught me that if you have a goal, you work toward it, and you stay committed, you can accomplish awesome things. I have to send out thanks to everyone that was involved in this one, both in building it and watching it throw pumpkins high into the sky. Perhaps it will inspire someone to build their own someday...</p>
+			<p>The trebuchet was a special project for me. It was the first project on which I embarked where I really was able to accomplish something big. It taught me that the most important part of doing something extraordinary is committing yourself to an idea. Also, there were a lot of people involved in this one, both in building it and watching it throw pumpkins high into the sky. Perhaps it will inspire someone to build their own someday...</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
