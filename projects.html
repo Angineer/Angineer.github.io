@@ -48,7 +48,7 @@
 			<img src="pictures/SolarEnclosure1.png">
 			<img src="pictures/SolarEnclosure2.png">
 			<img src="pictures/SolarEnclosure3.png">
-			<p><a href="http://youtu.be/5Zx4MBNZUQ4">Nerf gun cam</a></p>
+			<p><a href="http://youtu.be/vGRJ7N-sHWg">Nerf gun cam</a></p>
 			<p>Robot steering assembly</p>
 			<img src="pictures/Steering1.png">
 		</div>
@@ -215,7 +215,7 @@
 			<h5>October 8, 2014</h5>
 			<p>I got the last few pieces from the hardware store, welded and screwed everything together, and have something that looks like the diagram:</p>
 			<img src="pictures/Ram.png">
-			<p>As a test, I set the ram up on a hill at my parent's farm. The inlet water was being provided by a garden hose, so the water level and pressure were a little hard to control, but I managed to get it running. It's hard to see in these pictures, but the inlet hose is at the top of the ladder and the outlet hose is way up above in the red circle. Here's a video: <a href="http://youtu.be/r8bAmm3fzXM">Test Run</a>.</p>
+			<p>As a test, I set the ram up on a hill at my parent's farm. The inlet water was being provided by a garden hose, so the water level and pressure were a little hard to control, but I managed to get it running. It's hard to see in these pictures, but the inlet hose is at the top of the ladder and the outlet hose is way up above in the red circle. Here's a video: <a href="http://youtu.be/v1eQSlRO6yo">Test Run</a>.</p>
 			<img src="pictures/RamTest1.png">
 			<img src="pictures/RamTest2.png">
 			<p>After playing with the brass valve and trying to get a rhythm going, I realized that it was too difficult for the water to close the valve (probably because it wasn't an actual swing valve). To solve this, I used a small spring (smaller than the one it came with), which made the distance the valve had to move a little shorter.</p>
@@ -258,7 +258,7 @@
 			<img src="pictures/Whoops.png">
 			<p>In general, things are coming together, even with the setbacks, and I think that the robot will be driving again pretty soon.</p>
 			<h5>April 28 2015</h5>
-			<p>As promised, it is working again: <a href="https://youtu.be/0LgY9al-h9I">Robot Test</a>.</p>
+			<p>As promised, it is working again: <a href="https://youtu.be/zMsPi7ghxFU">Robot Test</a>.</p>
 			<p>I rewired the driver circuit and hooked up the two servos, plus I did some organizing of components in the box and added some strain reliefs. I also included a key switch, so you have to have the keys to turn it on (and off). I also bought a battery charger so I can have some extended testing sessions without worrying about draining it down too low for long periods at a time.</p>
 			<h5>July 26, 2015</h5>
 			<p>More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA-printed steering assembly tends to melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.</p>
@@ -267,6 +267,10 @@
 		<h5>August 30, 2015</h5>
 		<p>I've re-printed the steering. In addition to printing out new parts, the size of the connector piece (what would be the rack in an equivalent rack and pinion design) was too small, so I kludged together a new one out of the multiple prototypes that I had printed already.</p>
 		<p>With the power and steering figured out, I can finally play around with the programming to see what I can make the robot do. I currently have it performing a basic obstacle-avoidance algorithm that seems to work pretty well. It can drive itself around a room and generally not run into anything. However, I've noticed a different problem now. After a minute or two, the Arduino starts to reset every few seconds. If I turn the power off, wait a minute, and then turn it back on, it will run again for a minute and then do the same thing. I think that either the battery is getting worn out or I'm tripping a thermal shutdown--perhaps my power management solution is not really what I needed after all.</p>
+		<h5>October 11, 2015</h5>
+		<p>A couple of updates. First, it was indeed the thermal shutdown on the Arduino that was causing the robot to stall. The fix, as it turned out, was to run the power through the switching regulator (down to 6.5V) and <i>then</i> through a linear regular to get to 5V. That was sufficient to run the servos and keep out the noise from the DC motors.</p>
+		<p>Second, I was annoyed that the robot was spending so much time waiting in the <a href="https://www.youtube.com/watch?v=f8gt-79XD8o">existing obstacle avoidance algorithm</a>. I wanted it to run constantly, but the DC motors were too fast for the robot to have time to look around with its head servo. I wasn't sure if I could simply run PWM into the H-bridge circuit, but I gave it a shot and it worked well. The dog isn't sure he approves though...</p>
+		<p>I think the robot is finally at the point where I have sufficient hardware built to allow me to focus more on the software and design a little intelligence into it. I would still like to work on the hardware more in the future, but it feels like an accomplishment that it can drive around by itself and looks like a robot, however simple it is.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
@@ -290,7 +294,7 @@
 			<p>Like a handful of my projects, this one came from Make Magazine. The biggest difference with our design was, instead of having a tall pole with guylines, our launcher was short and attached to a piece of plywood so it would sit directly on the ground with no extra setup. We also used a simple nail in place of the retainer/release spring.</p>
 			<img src="pictures/LaunchPad.png">
 			<p>(You can see our brave astronaut <a href="http://www.imdb.com/character/ch0008888/">Jim West</a> getting ready for liftoff)</p>
-			<p>Once the launch pad was done, we designed some rockets and had a blast (pun intended). The results are available for viewing on my Youtube channel: <a href="http://www.youtube.com/playlist?list=PLB04EEA5E017BD8A1">Rocket TV</a>.</p>
+			<p>Once the launch pad was done, we designed some rockets and had a blast (pun intended). The results are available for viewing on my Youtube channel: <a href="http://www.youtube.com/playlist?list=PLqXg6Sc_zQ4YyfjORbdJicAUrOlDx4Sy6">Rocket TV</a>.</p>
 		</div>
 	</div>
 	<a href="#">Top</a>
