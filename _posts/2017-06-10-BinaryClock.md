@@ -7,13 +7,13 @@ categories: projects
 
 A binary clock is just like a regular clock, but it displays the time in a binary (or in my case a psuedo-binary) format.
 
-####Requirements:
+#### Requirements:
 
 * LED display
 * Simple form
 * Correct time
 
-####References:
+#### References:
 
 * ![Binary Clock](http://en.wikipedia.org/wiki/Binary_clock)
 * ![Ken\'s Blog](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
