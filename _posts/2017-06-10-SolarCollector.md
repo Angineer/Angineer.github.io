@@ -1,0 +1,39 @@
+---
+layout: project
+title:  "Solar Collector"
+date:   2015-11-17 16:16:01 -0600
+categories: projects
+---
+
+I wanted to build a solar hot water system to learn about solar engineering and to reduce the monthly hot water bill.
+
+#### Requirements:
+
+* Heat water using solar energy
+* Connect with a residential hot water source system
+* Use as little non-solar energy as possible
+
+#### References:
+
+* ![Link](URL)
+* <a href="http://www.mathwords.com/f/focus_parabola.htm">Focus of a parabola</a>
+
+#### Design Log
+The project started out as a parabolic collector. When I learned about the properties of parabolas in geometry class (specifically, the fact that you could calculate a focal point), I thought it would awesome to demonstrate using a big mirror. I designed a trough collector and built it out of some wood we had lying around, a big piece of scrap sheet metal, and a copper pipe that I bought. I tried to set it up to cycle water via thermosiphon, using a plastic tub and some garden hose:
+
+<img src="pictures/TroughProto1.png">
+
+The thermal losses associated with leaving the pipe in open air, as well as the inaccuracies in my parabolic curve made the design a failure. However, with a few more calculations, I figured I could build an entirely enclosed trough that could be insulated:
+
+<img src="pictures/CADTrough.png">
+
+I built the new version using parts from the old one as well as an old sliding glass door, then set it up basically the same way as the old one. I discovered a few things:
+
+1. That pipe gets really, really hot
+2. The curve was still not very accurate, despite how much heat it was generating
+3. I couldn't really use the thing for capturing heat without insulating the pipes and holding tank
+4. Adjusting the angle so that the collector was facing the sun directly at noon was a big chore, as it had to be done daily and I hadn't come up with a good system for doing it
+
+Also, because I was building this on the cheap, I had used some basic styrofoam for some of the insulation. As it turns out, the concentrated light was getting so hot that it melted the styrofoam into a twisted brown mess.
+
+So, in order to simplify things, I decided to convert this project into a flat plate collector. Basically, instead of concentrating the light into a single line, the pipe captures the energy by spreading out over a larger area and then recombining at the end. This type is quite common, especially for DIY setups. It eliminates the need for the daily adjustment because it is less impacted by the movement of the sun, and it allows the box to be more compact and easier to insulate. On the flip side, it is slightly less interesting and requires that you build a manifold. However, I thought that the benefits of having a collector that works well outweighed the potential scientific interest.
