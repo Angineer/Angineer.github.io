@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Solar Collector"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 I wanted to build a solar hot water system to learn about solar engineering and to reduce the monthly hot water bill.

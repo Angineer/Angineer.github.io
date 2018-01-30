@@ -1,11 +1,8 @@
 ---
-layout: project
 title:  "Potato Cannon"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
-A popular device for launching potatoes into the sky. This project was started around the same time as the [Trebuchet]({% post_url 2017-06-10-Trebuchet %}) (do you see a theme?).
+A popular device for launching potatoes into the sky. This project was started around the same time as the [Trebuchet](Trebuchet.html) (do you see a theme?).
 
 #### Requirements:
 

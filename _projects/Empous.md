@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Empous, the Empire Simulation Game"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 I\'ve always been interested in coding as a hobby and learned various languages in my free time. The first programming language I learned was BASIC, and I learned it on the TI-83 calculators that we had in high school. I made a few games, and my friend Ryan also made a very cool game called Empous for the TI-83. It was an empire management game, and I was always impressed with how complex it was, given that it ran on a tiny little calculator screen.

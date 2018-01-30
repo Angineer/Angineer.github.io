@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Service Robot"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 This robot will take orders for food and drink and deliver them to you.

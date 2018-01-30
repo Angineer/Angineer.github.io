@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Soda Bottle Rockets"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 This one was 100% inspired by my high school physics class. In the class, we had to build rockets out of a soda bottle that could carry an egg. At the top of the rocket\'s flight, the egg was supposed to eject and be carried back to earth with a parachute. I thought it was so much fun that I went home and built my own launch pad.

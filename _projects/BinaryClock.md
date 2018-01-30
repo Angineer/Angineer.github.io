@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Binary Clock"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 A binary clock is just like a regular clock, but it displays the time in a binary (or in my case a psuedo-binary) format.

@@ -1,1 +1,12 @@
 name: "Andy's Website"
+collections:
+  projects:
+    directory: _projects
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

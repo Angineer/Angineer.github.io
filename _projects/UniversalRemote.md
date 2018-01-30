@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Universal Remote"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 I had been playing with a few different technologies for home automation and found a good application for them, so I designed what I call the Universal Remote, which is universal in a broader sense than most remotes out there. 

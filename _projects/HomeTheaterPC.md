@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Home Theater PC"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 For this project, I embarked on building my own PC for gaming in the living room. I had always been a console person when I was younger, but the idea of being able to tweak my computer to do more interesting things became more of a priority as I got older and could afford it.
@@ -50,7 +47,7 @@ As a somewhat related project, I just created a webpage-controlled Raspberry Pi 
 
 ##### May 25, 2015
 
-I\'ve been working on the Raspberry Pi relay a little more and have branched it off into [its own project]({% post_url 2017-06-10-UniversalRemote %}).
+I\'ve been working on the Raspberry Pi relay a little more and have branched it off into [its own project](UniversalRemote.html).
 
 At the same time, I built a new computer which I was hoping to use as my streaming computer. However, after thinking about the various configurations I could use, I decided to go with the following: the beefy computer will be the media computer and stay in the living room for now where we have wired internet; the new computer will be my desktop computer and run off the wifi. I like this because it means that the computer that I built for gaming will be dedicated to the gaming exclusively with Windows and the most stable internet connection, and the desktop computer will run Linux, which I prefer for everyday things.
 

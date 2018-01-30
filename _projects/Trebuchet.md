@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "Trebuchet"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 A trebuchet is a type of catapult that uses potential energy stored in a large counterweight to throw its payload. They were featured prominently in the video game Age of Empires 2, which my cousin and I played for many hours when we were younger. We decided to take that interest to the real world and build one of our own.

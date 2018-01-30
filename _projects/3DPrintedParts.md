@@ -1,8 +1,5 @@
 ---
-layout: project
 title:  "3D Printer Projects"
-date:   2015-11-17 16:16:01 -0600
-categories: projects
 ---
 
 Not really a project in and of itself, this one is just a collection of interesting things I\'ve made on the 3D printer.
