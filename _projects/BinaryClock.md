@@ -16,7 +16,8 @@ A binary clock is just like a regular clock, but it displays the time in a binar
 * ![Ken\'s Blog](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
 
 
-#### Design Log
+#### Design Log:
+
 I did some research into other builds that people had done and decided to base my design on this blog that I found: [Ken\'s Blog](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
 
 The core components are
