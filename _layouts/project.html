@@ -4,9 +4,28 @@
     {% include head.html %}
 
     <body>
-        {% include header_project.html %}
+        {% include header_default.html %}
         
-        {{ content }}
+        <table class="twoColumn">
+        	<tr>
+        		<td class="leftColumn">
+			        	
+						    {% assign sorted_projects = site.posts | sort:"title" %}
+						    
+						    {% for project in sorted_projects %}
+						    
+						      <p><a href="{{ project.url }}">{{ project.title }}</a></p>
+						    
+						    {% endfor %}
+						    
+						    <a href="makerspace.html">Westhampton Library Maker Club</a>
+			    </td>
+
+			    <td class="rightColumn">
+			        	{{ content }}
+			    </td>
+		    </tr>
+    	</table>
         
         {% include footer.html %}
     </body>

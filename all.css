@@ -1,3 +1,12 @@
+/* Wikipedia colors for links */
+a {
+    color: #0645AD;
+}
+a:visited {
+    color: #0B0080;
+}
+
+
 h1 {
 	text-align: center;
 	padding: 0 35 0 0;
@@ -11,9 +20,13 @@ h2 {
 	margin: 5 5 5 5;
 }
 
+table {
+	/*border: 1px solid black;*/
+}
+
 td {
 	vertical-align: top;
-	text-align: center;
+	/*border: 1px solid black;*/
 }
 
 .mainHeading {
@@ -32,6 +45,23 @@ td {
 	margin: 10px 10px;
 }
 
-.art {
-	width: 100px;
+/* 2 column setup */
+.twoColumn {
+  border-collapse: separate;
+  border-spacing: 5px 5px;
+  height: 100%;
+}
+.leftColumn {
+	width: 15%;
+	height: 100%;
+	text-align: left;
+	padding: 5px;
+	background-color: #f6f6f6;
+	/*margin-right: 25px;*/
+}
+.rightColumn {
+	width: 85%;
+	text-align: left;
+	padding: 10px;
+	/*background-color: #f6f6f6;*/
 }
