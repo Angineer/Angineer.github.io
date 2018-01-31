@@ -1,22 +1,16 @@
 ---
 title:  "Binary Clock"
+status: complete
 ---
 
-A binary clock is just like a regular clock, but it displays the time in a binary (or in my case a psuedo-binary) format.
+A binary clock is just like a regular clock, but it displays the time in a binary or psuedo-binary format. I learned about the concept at some point in high school and toyed around with some app versions on my computer. This project was an attempt to capure the concept and make it into a pleasing piece of art using an Arduino.
 
-#### Requirements:
+Related info:
 
-* LED display
-* Simple form
-* Correct time
+* [Binary Clock info on wikipedia](http://en.wikipedia.org/wiki/Binary_clock)
+* [Blog that my design is based on](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
 
-#### References:
-
-* ![Binary Clock](http://en.wikipedia.org/wiki/Binary_clock)
-* ![Ken\'s Blog](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
-
-
-#### Design Log:
+### Design
 
 I did some research into other builds that people had done and decided to base my design on this blog that I found: [Ken\'s Blog](http://blog.thelifeofkenneth.com/2010_02_01_archive.html)
 
@@ -36,16 +30,18 @@ To read the clock, you have to be able to convert the numbers from binary into d
 
 The DS3234 is a very cool chip. It is accurate enough that, using this design, I never foresee having to reset it. Because I used the breakout board from Sparkfun that includes a backup battery, I can also unplug the clock and not worry about losing the time. Simply plug it back in and it will have the current time on it. The board is a little expensive for such a simple project, but I installed it using a socket so if I ever decide to use it for another project, I can repurpose it.
 
-One bad thing about this design, however, is that I did not allow the user to have any inputs without taking the entire clock apart. This means that setting/adjusting the time does require popping out the DS3234 and reprogramming it with a separate Arduino.
+My original design had an issue because I did not allow the user to provide any inputs to the microcontroller without taking the entire clock apart. This meant that setting/adjusting the time required popping out the DS3234 and reprogramming it with a separate Arduino. I ended up fixing this by adding a button on the side of the clock to advance the time (very useful for daylight savings).
 
-##### August 2012
+### Build Log
+
+#### August 2012
 All the electrical parts are in and I have them attached to a breadboard for testing/coding. Here\'s a picture of the setup (you can see the different components laid out, and the seconds and minutes working):
 
 ![](/pictures/Clock_Breadboard.jpg)
 
 Here is my code: [Code](/resources/Clock_Run.ino)
 
-##### September 2012
+#### September 2012
 I went and picked out a project box to put it in, so I\'m ready to start soldering things to the PCB. I\'m not going to say that I\'m a master solderer or circuit designer, so it\'s a little bit messy. But hey, it works:
 
 ![](/pictures/Clock_Guts.jpg)
@@ -54,7 +50,7 @@ Drilled a few holes, added a strain relief, and viola: a finished binary clock. 
 
 ![](/pictures/Clock_Final.jpg)
 
-##### June 2013
+#### June 2013
 After having the clock around for a while, I have had some time to reflect on the design. There are a few drawbacks to the way that I built it:
 
 * The time must be set manually. This is fine for most of the year, as the DS3234 keeps time extremely accurately. However, whenever daylight savings time changes, I have to pop the box open and change things forward or backward an hour. I\'ll probably add a button to do this in the future
@@ -62,7 +58,7 @@ After having the clock around for a while, I have had some time to reflect on th
 
 In general, I am very pleased with the outcome. It makes a great clock and piece of art for friends who don\'t have any interest in learning binary.
 
-##### January 2, 2015
+#### January 2, 2015
 
 The effort required to update the clock every 6 months finally got to me and I added a button to change the time. I installed one pushbutton that advances the time when you hold it down and one potentiometer to adjust the brightness:
 
