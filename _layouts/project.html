@@ -5,6 +5,24 @@
 
     <body>
         {% include header_default.html %}
+
+	{% assign status = page.status | downcase %}
+	{% if status != "" %}
+		<div style="text-align: center; font-size: small;">
+			status: 
+			<span style="color:
+				{% if status == "complete" %}
+					green
+				{% elsif status == "ongoing" %}
+					#ffcc00
+				{% elsif status == "on hold" %}
+					#ff3300
+				{% endif %}
+				">
+				{{ page.status | downcase }}
+			</span>
+		</div>
+	{% endif %}
         
         <table class="twoColumn">
         	<tr>

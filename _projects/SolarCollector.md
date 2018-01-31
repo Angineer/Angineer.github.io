@@ -1,6 +1,6 @@
 ---
 title:  "Solar Collector"
-status: on-hold
+status: "on hold"
 ---
 
 I wanted to build a solar hot water system to learn about solar engineering and to reduce the monthly hot water bill.
