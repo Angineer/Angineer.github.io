@@ -1,6 +1,5 @@
 ---
 title:  "3D Printer Projects"
-status: "complete"
 ---
 
 This is just a collection of interesting things I\'ve made on the 3D printer.

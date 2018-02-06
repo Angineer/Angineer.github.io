@@ -41,7 +41,8 @@ During this time period, I was also frequently visiting the [Berkshire County Te
 #### June 1, 2015
 Here is a picture of the current setup:
 
-![](/pictures/UR_Box.png)
+![](/pictures/UR_Box1.png)
+![](/pictures/UR_Box2.png)
 
 I currently have two sensors connected:
 
