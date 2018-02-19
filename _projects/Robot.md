@@ -131,3 +131,14 @@ I spent the day today working on the base design. I've created a preliminary des
 It's going to take some more time to get the entire design ready because I'm learning FreeCAD as I go.
 
 I also started hacking away at some of the components for the base and robot and found some gaps in my materials or preparation, so I had to order a few parts.
+
+#### Feb 19, 2018
+I've spent a little more time on the base design. Specifically, I've been thinking about how to make the charging connection between the mobile platform and the base. I think that I will use a magnetic connector like the ones used for Mac laptops. The connector needs to have some alignment features, so I've added that to the robot side. It will also need flexibility, so I added a compression spring to the base side. This will hold it in place but allow some movement during alignment:
+
+![](/pictures/Robot_PowerConnector.png)
+
+Here's the full base design with the robot parked in charging position:
+
+![](/pictures/Robot_BaseFull.png)
+
+I've been running behind schedule a little bit, but I think the project is still on track. Most of the delay is due to postponing component purchases until I have more stability in my day job. Regardless, since adding a work breakdown structure, it has been much easier to keep tabs on my progress and stay abreast of how the project is going overall.
