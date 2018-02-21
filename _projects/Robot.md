@@ -141,4 +141,6 @@ Here's the full base design with the robot parked in charging position:
 
 ![](/pictures/Robot_BaseFull.png)
 
+The current mobile platform design uses line-following for navigation throughout the house. I purchased a [line-follower array from Sparkfun](https://www.sparkfun.com/products/13582) and added it to the Robot--[here](https://www.youtube.com/watch?v=50ZuVvZ7mBI) is a short clip of my initial testing. I still need to make a permanent fixture to attach it to the chassis, as it is currently attached with duct tape.
+
 I've been running behind schedule a little bit, but I think the project is still on track. Most of the delay is due to postponing component purchases until I have more stability in my day job. Regardless, since adding a work breakdown structure, it has been much easier to keep tabs on my progress and stay abreast of how the project is going overall.
