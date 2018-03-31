@@ -43,10 +43,14 @@ We ran into the following problems during the demo:
 
 In the end, we could show that the concept worked by playing a few notes, but we couldn't actually play a full song.
 
-#### February 8, 2018
+#### Mar 16, 2018
 We've made the following upgrades:
 * Soldered headers on the hat to help with connections to the Pi
-* Redesigned the middle piece of the acrylic components to prevent balls from falling out the sides
-* Recut the middle piece from thinner stock
-* Added more harware to hold the acrylic pieces together
+* Redesigned the middle plate to prevent balls from falling out the sides
+* Recut the middle plate from a piece of 1/4" wood
 
+The newly reassembled machine:
+
+![](/pictures/Marble_Reassembled1.jpg) ![](/pictures/Marble_Reassembled2.jpg)
+
+After applying these upgrades, we ran a simple test, which you can see [here](https://youtu.be/z4I49aJYiOA). The upgrades are definitely an improvement, but we are now able to see some other issues in the design which we can tweak. Specifically, the wiring needs some organization, the servos need to be realigned, and the balls are still catching at the bottom of the chute. We also are planning on making it easier to add the balls and catch them while the machine is running.
