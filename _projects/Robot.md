@@ -119,7 +119,7 @@ The robot has been on hold for a little bit while I've been in school getting my
 
 The main thing that I've gained from the master's program is a perspective on systems engineering. The basic philosophy behind systems engineering is that you should design a system before you start implementing it. This will save you time and money by illuminating obscure issues early and it will ensure that all system components are going towards fulfilling a set of clear system requirements. Without this perspective, projects can tend to get bloated or behind schedule (a symptom I've noticed in this project in particular). So, with that in mind, I've created a set of design documents that I think will help me complete the robot by the end of the year. You can see the updates in the Design section above.
 
-In addition to the systems engineering, I have written a bunch of code which makes up the foundational software components of the base station. I am writing it in C++ to build up my skills with that and CMake. All the code can be found on my [Github repo](https://github.com/Angineer/roboDrive).
+In addition to the systems engineering, I have written a bunch of code which makes up the foundational software components of the base station. I am writing it in C++ to build up my skills with that and CMake. All the code can be found on my [Github repo](https://github.com/Angineer/Robot-Mobile).
 
 #### Feb 1, 2018
 I spent the day today working on the base design. I've created a preliminary design in FreeCAD based on a hand-drawn design that I made last summer:
@@ -144,3 +144,17 @@ Here's the full base design with the robot parked in charging position:
 The current mobile platform design uses line-following for navigation throughout the house. I purchased a [line-follower array from Sparkfun](https://www.sparkfun.com/products/13582) and added it to the Robot--[here](https://www.youtube.com/watch?v=50ZuVvZ7mBI) is a short clip of my initial testing. I still need to make a permanent fixture to attach it to the chassis, as it is currently attached with duct tape.
 
 I've been running behind schedule a little bit, but I think the project is still on track. Most of the delay is due to postponing component purchases until I have more stability in my day job. Regardless, since adding a work breakdown structure, it has been much easier to keep tabs on my progress and stay abreast of how the project is going overall.
+
+#### Mar 30, 2018
+While waiting to buy parts, I've focused on the software components of Robie (I've also decided that will be his official name). Because I never had a formal introduction to C++, I set aside some time to read Bjarne Stroustup's _The C++ Programming Language_. Even though I knew most of the concepts already, it was nice to get a new perspective, especially that of the language's creator. I've also been studying for technical interviews, which has helped me learn some of the language's "gotchas."
+
+After some time away and armed with new knowledge, I looked at the existing C++ code and made some upgrades:
+* First, I split the existing repo into separate repos for each component: base software, mobile platform software, and user interface software. You can see the new repos on [Github](https://github.com/Angineer).
+* Second, I tore up and replaced some of my simplistic code with some more sophisticated components, especially parts that dealt with C-style strings.
+* Third, I separated out the inventory and communication code into a separate library so it was available to be linked to the HTTP server and for any apps that I wrote in the future.
+
+Once I had those revisions complete, I focused on writing the HTTP server code so users could interact with the inventory. I was unsure how to approach this part, since HTTP doesn't have a standard implementation in C++. I knew I could write a server myself, but I didn't want to go through such a hassle for something that had already been implemented many times before. I ended up finding a [simple server](https://github.com/eidheim/Simple-Web-Server) off of which I could base my own. 
+
+In making the HTTP server interact with the inventory server, I realized that I really needed to have some kind of administrative interface for checking on and updating the inventory. To create this, I converted my old test client--which was just for debugging the communications--into a full admin client. This revealed a number of issues with my original design, which I fixed up as I went.
+
+Now things are running pretty smoothly. I can connect to the HTTP server from my browser, submit an order, and see the inventory levels change. If I need to edit things, I just need to boot up the admin console and send a few simple commands.
