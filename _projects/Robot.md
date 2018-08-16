@@ -158,3 +158,25 @@ Once I had those revisions complete, I focused on writing the HTTP server code s
 In making the HTTP server interact with the inventory server, I realized that I really needed to have some kind of administrative interface for checking on and updating the inventory. To create this, I converted my old test client--which was just for debugging the communications--into a full admin client. This revealed a number of issues with my original design, which I fixed up as I went.
 
 Now things are running pretty smoothly. I can connect to the HTTP server from my browser, submit an order, and see the inventory levels change. If I need to edit things, I just need to boot up the admin console and send a few simple commands.
+
+#### Jul 3, 2018
+We moved into a new place so I've been setting up my workshop:
+
+![](/pictures/Robot_Workshop.png)
+
+I've got a lot more room to build, which has helped me make good progress on the home base portion of the project:
+
+![](/pictures/Robot_BaseFrame.png)
+
+#### Aug 12, 2018
+The design of the power electronics for the mobile platform has been a sticking point because I've been unsure of how to approach the battery charging. I envisioned an auto-charging system where Robie would drive up to the base and make some kind of magnetic connection to a [charging circuit](/resources/robie_mobile_power.pdf). But I also wanted to switch battery chemistry from lead acid to something lighter.
+
+I did some light research and discussed the idea with my electrical engineer friend and decided that the added circuitry would be more complex than I had hoped. So I've decided to make the auto charging another phase of the project after the current build is done. For now, I'm going to use a NiMH battery and a basic charger that I bought online.
+
+The basic wiring of the mobile platform had always been very messy and fragile, so I decided to reorganize. I'm most of the way done and it's looking much better:
+
+![](/pictures/Robot_NewWiring.png)
+
+You can also see that I've mounted my line-following board on the bottom of the bot:
+
+![](/pictures/Robot_LineFollowerMounted.png)
