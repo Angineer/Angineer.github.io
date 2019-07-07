@@ -180,3 +180,15 @@ The basic wiring of the mobile platform had always been very messy and fragile, 
 You can also see that I've mounted my line-following board on the bottom of the bot:
 
 ![](/pictures/Robot_LineFollowerMounted.png)
+
+#### Jul 7, 2019
+Although I haven't been posting here, I've made a number of updates in the last few months.
+
+First, I did some machining and assembly of the base station. The main takeaway is that typical consumer plastics are difficult to machine. In particular, I had a hard time drilling out the center of the spindles in my conveyor belts. The results are accurate enough to work with, but I may have to redo them (probably a 3D print) in the future. I also tweaked the design a little and used some threaded rod to hold the conveyors together. Here are a couple pictures of what I have so far:
+
+![](/pictures/Robot_Conveyors_1.png) ![](/pictures/Robot_Conveyors_2.png)
+
+Second, I've done some work on the coding side. I rearranged things a little bit to update the style and also to make everything more modular. The coolest addition is Bluetooth communication between the Raspberry Pis; now the base and the mobile platform can communicate with each other. You can see the updates on my [Github](https://github.com/Angineer) page.
+
+The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video: [Ordering System](https://youtu.be/Y87iaBGqlAw).
+
