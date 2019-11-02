@@ -1,0 +1,126 @@
+/* Wikipedia colors for links */
+a {
+    color: #0645AD;
+    text-decoration:none;
+}
+a:visited {
+    color: #0B0080;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+    color:#CC7A34;
+}
+
+table {
+}
+
+td {
+}
+
+body {
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
+}
+
+.backlink {
+    background-color:#155ABB;
+    padding:5px;
+    width:84%;
+    margin:auto;
+}
+
+.picbox {
+    overflow:hidden;
+}
+
+.contactbox {
+    margin:10px;
+}
+
+.contacttd {
+    padding:3px;
+}
+
+.detailsbox {
+    margin:10px;
+}
+
+.detailstable {
+    width:100%;
+    border:3px ridge lightgrey;
+    border-collapse:collapse;
+}
+
+.detailstr {
+    border:3px ridge lightgrey;
+    border-collapse:collapse;
+}
+
+.detailstable2 {
+    width:100%;
+    border-collapse:collapse;
+}
+
+.detailsth {
+    color:#35618B;
+    background-color:#AFD1F3;
+    text-align:left;
+    border:3px solid white;
+}
+
+.detailstd {
+    background-color:#D7EAF3;
+    text-align:left;
+    border:3px solid white;
+}
+
+.blueheader {
+    color:#FFFFFF;
+    background-color:#659ACF;
+    text-align:left;
+    border:3px ridge lightgrey;
+    border-collapse:collapse;
+    padding-left:20px;
+}
+
+.urlbox {
+    margin:10px;
+    border:1px solid black;
+}
+
+.musicbox {
+    margin:10px;
+    border:1px solid black;
+}
+
+.extnetworkbox {
+    border:2px solid black;
+    text-align:center;
+}
+
+.orangediv {
+    color:#DF6F1E;
+    background-color:#FFCC95;
+    font-weight:bold;
+}
+
+.blinking{
+    animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #FF0000; }
+    20%{    color: #FF8000; }
+    40%{    color: #FFFF00; }
+    60%{    color: #40FF00; }
+    80%{    color: #00FFFF; }
+    100%{   color: #BF00FF; }
+}
