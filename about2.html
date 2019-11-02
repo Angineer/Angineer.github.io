@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	    <link rel="stylesheet" type="text/css" href="about.css">
+        <link rel="stylesheet" type="text/css" href="about.css">
         <title>About Andy</title>
     </head>
     <body>
@@ -50,11 +50,18 @@
                     <p style="margin:0px 0px 0px 5px"><b>Page URL:</b></p>
                     <p style="margin:0px 0px 0px 5px">&emsp;http://www.adtme.com/about</p>
                 </div>
-                <!--
                 <div class="musicbox">
-                    <p>TODO</p>
+                    <audio id="myaudio">
+                        <source src="resources/Derek Clegg - Cest La Vie.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="playbutton">
+                        <button onclick="testPlay()" type="button"><img id="playbutton" src="pictures/play.png"></button>
+                    </div>
+                    <div class="trackinfo">
+                        <p class="trackname">C'est La Vie - Derek Clegg</p>
+                        <a href="https://www.freemusicarchive.org/music/Derek_Clegg/Solar" class="musiclinks">Add song to your profile</a>
+                    </div>
                 </div>
-                -->
                 <div class="detailsbox">
                     <table class="detailstable">
                         <tr>
@@ -66,7 +73,7 @@
                                     <th class="detailsth">Status:</td><td class="detailstd"><a href="https://sites.google.com/view/emi-andy-wedding">Married</a></td>
                                 </tr>
                                 <tr>
-                                    <th class="detailsth">Here for:</td><td class="detailstd">Retro social media</td>
+                                    <th class="detailsth">Here for:</td><td class="detailstd">The Angles</td>
                                 </tr>
                                 <tr>
                                     <th class="detailsth">Hometown</td><td class="detailstd">Westhampton, MA</td>
@@ -107,23 +114,41 @@
                     <p>In college, I studied mechanical engineering. I decided to become an engineer because I love to build things. I went to school in Troy, NY, which was the first time I had ever lived in a city. After college, my girlfriend and I moved to Boulder, Colorado, where I did a lot of hiking and learned what a hackerspace was.</p>
                     <p>The next byway on my journey took me to Pittsburgh, PA to pursue a master's degree in robotics. I discovered that Pittsburgh is full of robotics nerds, so I decided to stick around for a little while.</p>
                     <p>Now, I work on self-driving trucks for warehouses. I play the banjo, have a dog, and love breakfast food.</p>
-                    <p>Here is my resume: <a href="resources/Andrew Tracy Resume.pdf" target="_blank">PDF</a></p>
-                    <p>Don't confuse me with <a href="http://m.mlb.com/player/282905/andy-tracy">Andy Tracy</a> of the MLB</p>
                     <br>
                     <p>Theme by: <span class="blinking">✧✧AndysAwesomeThemes✧✧</span></p>
                     <h4>Who I'd like to meet:</h4>
+                    <p>Robby the Robot</p>
                 <div>
                 <div class="friendspace">
                     <div class="orangediv">Andy's Friend Space</div>
-                    <p><b>Andy has</b> 8 <b>friends</b></p>
+                    <p><b>Andy has</b> 413 <b>friends</b></p>
                     <table class="friendtable">
                         <tr>
-                            <td>Friend 1</td><td>Friend 2</td><td>Friend 3</td><td>Friend 4</td>
+                            <td class="friendtd"><a href="">Tom<br><img src="pictures/Tom.jpg" href="" style="width:100px"></a></td>
+                            <td class="friendtd"><a href="">Leslie Howard<br><img src="pictures/Leslie.jpg" href="" style="width:100px"></a></td>
+                            <td class="friendtd"><a href="">Rocky<br><img src="pictures/Rocky.jpg" href="" style="width:100px"></a></td>
+                            <td class="friendtd"><a href="">Rob<br><img src="pictures/Rob.jpg" href="" style="width:100px"></a></td>
                         </tr>
                     </table>
                     <p style="text-align:right">View Andy's Friends: <a href="">All</a> | <a href="">Online</a> | <a href="">New</a></p>
                 <div>
             </div>
         </div>
+        <script>
+            var jukebox = document.getElementById("myaudio");
+            var button = document.getElementById("playbutton");
+            var isPlaying = false;
+            function testPlay() {
+                if ( isPlaying ) {
+                    jukebox.pause();
+                    button.src="pictures/play.png";
+                    isPlaying = false;
+                } else {
+                    jukebox.play();
+                    button.src="pictures/pause.png";
+                    isPlaying = true;
+                }
+            }
+        </script>
     </body>
 </html>
