@@ -162,6 +162,10 @@ body {
     100%{   color: #BF00FF; }
 }
 
+.friendtable {
+    margin:auto;
+}
+
 .friendtd {
     text-align:center;
     padding:0px 15px 0px 15px;
