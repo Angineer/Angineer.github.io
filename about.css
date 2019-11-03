@@ -12,6 +12,7 @@ h1 {
 }
 
 h2 {
+    margin:0px;
 }
 
 h3 {
@@ -108,7 +109,7 @@ body {
 .playbutton {
     display:table-cell;
     vertical-align:middle;
-    padding:10px;
+    padding:2px;
 }
 
 .trackinfo {
@@ -132,7 +133,7 @@ body {
     color:#000000;
     background-color:#FFFFFF;
     padding:0px 5px 0px 7px;
-    margin:auto;
+    margin:0px 3px 4px 2px;
     border:1px solid black;
     border-radius:5px;
 }
@@ -140,6 +141,7 @@ body {
 .extnetworkbox {
     border:2px solid black;
     text-align:center;
+    padding:15px;
 }
 
 .orangediv {
