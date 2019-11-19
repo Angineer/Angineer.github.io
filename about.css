@@ -20,6 +20,7 @@ h3 {
 
 h4 {
     color:#CC7A34;
+    margin: 5px 0px -10px 0px;
 }
 
 table {
@@ -50,6 +51,8 @@ body {
 
 .contacttd {
     padding:3px;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
 }
 
 .detailsbox {
@@ -77,12 +80,16 @@ body {
     background-color:#AFD1F3;
     text-align:left;
     border:3px solid white;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
 }
 
 .detailstd {
     background-color:#D7EAF3;
     text-align:left;
     border:3px solid white;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
 }
 
 .blueheader {
@@ -91,7 +98,9 @@ body {
     text-align:left;
     border:3px ridge lightgrey;
     border-collapse:collapse;
-    padding-left:20px;
+    padding-left:10px;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
 }
 
 .urlbox {
@@ -169,4 +178,6 @@ body {
 .friendtd {
     text-align:center;
     padding:0px 15px 0px 15px;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:10pt;
 }
