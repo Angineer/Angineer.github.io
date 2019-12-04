@@ -6,44 +6,43 @@
     <body>
         {% include header_default.html %}
 
-	{% assign status = page.status | downcase %}
-	{% if status != "" %}
-		<div style="text-align: center; font-size: small;">
-			status: 
-			<span style="color:
-				{% if status == "complete" %}
-					green
-				{% elsif status == "ongoing" %}
-					#ffcc00
-				{% elsif status == "on hold" %}
-					#ff3300
-				{% endif %}
-				">
-				{{ page.status | downcase }}
-			</span>
-		</div>
-	{% endif %}
+    {% assign status = page.status | downcase %}
+    {% if status != "" %}
+        <div style="text-align: center; font-size: small;">
+            status: 
+            <span style="color:
+                {% if status == "complete" %}
+                    green
+                {% elsif status == "ongoing" %}
+                    #ffcc00
+                {% elsif status == "on hold" %}
+                    #ff3300
+                {% endif %}
+                ">
+                {{ page.status | downcase }}
+            </span>
+        </div>
+    {% endif %}
         
         <table class="twoColumn">
-        	<tr>
-        		<td class="leftColumn">
-			        	
-						    {% assign sorted_projects = site.projects | sort:"title" %}
-						    
-						    {% for project in sorted_projects %}
-						    
-						      <p><a href="{{ project.url }}">{{ project.title }}</a></p>
-						    
-						    {% endfor %}
-						    
-						    <a href="/makerspace.html">Westhampton Library Maker Club</a>
-			    </td>
+            <tr>
+                <td class="leftColumn">
+                    {% assign sorted_projects = site.projects | sort:"title" %}
+                    
+                    {% for project in sorted_projects %}
+                    
+                        <p><a href="{{ project.url }}">{{ project.title }}</a></p>
+                    
+                    {% endfor %}
+                    
+                    <a href="/makerspace.html">Westhampton Library Maker Club</a>
+                </td>
 
-			    <td class="rightColumn">
-			        	{{ content }}
-			    </td>
-		    </tr>
-    	</table>
+                <td class="rightColumn">
+                    {{ content }}
+                </td>
+            </tr>
+        </table>
         
         {% include footer.html %}
     </body>

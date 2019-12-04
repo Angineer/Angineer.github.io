@@ -34,6 +34,14 @@ td {
 	/*border: 1px solid black;*/
 }
 
+.img_h {
+    width: 300px;
+}
+
+.img_v {
+    height: 300px;
+}
+
 .mainHeading {
 	padding: 0;
 }

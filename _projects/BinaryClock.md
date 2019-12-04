@@ -1,9 +1,16 @@
 ---
 title:  "Binary Clock"
 status: complete
+pictures:
+    - https://www.dropbox.com/s/i7il0e5qzk58pv6/Breadboard.jpg?raw=1
+    - https://www.dropbox.com/s/mfsz4a50z89xxtx/Guts.jpg?raw=1
+    - https://www.dropbox.com/s/5xdb37793q9p3rt/Final.jpg?raw=1
+    - https://www.dropbox.com/s/z3o46dw1at5e7rj/Buttons.png?raw=1
 ---
 
 A binary clock is just like a regular clock, but it displays the time in a binary or psuedo-binary format. I learned about the concept at some point in high school and toyed around with some app versions on my computer. This project was an attempt to capure the concept and make it into a pleasing piece of art using an Arduino.
+
+<a href="https://www.dropbox.com/sh/w81acam4di78ao7/AABtxWkc54OTr975xa2SmpMda?dl=0">Photo gallery</a>
 
 Related info:
 
@@ -37,18 +44,18 @@ My original design had an issue because I did not allow the user to provide any 
 #### August 2012
 All the electrical parts are in and I have them attached to a breadboard for testing/coding. Here\'s a picture of the setup (you can see the different components laid out, and the seconds and minutes working):
 
-![](/pictures/Clock_Breadboard.jpg)
+{% include img_h.html idx=0 %}
 
 Here is my code: [Code](/resources/Clock_Run.ino)
 
 #### September 2012
 I went and picked out a project box to put it in, so I\'m ready to start soldering things to the PCB. I\'m not going to say that I\'m a master solderer or circuit designer, so it\'s a little bit messy. But hey, it works:
 
-![](/pictures/Clock_Guts.jpg)
+{% include img_h.html idx=1 %}
 
 Drilled a few holes, added a strain relief, and viola: a finished binary clock. It\'s now happily telling time on my desk at home.
 
-![](/pictures/Clock_Final.jpg)
+{% include img_h.html idx=2 %}
 
 #### June 2013
 After having the clock around for a while, I have had some time to reflect on the design. There are a few drawbacks to the way that I built it:
@@ -62,7 +69,7 @@ In general, I am very pleased with the outcome. It makes a great clock and piece
 
 The effort required to update the clock every 6 months finally got to me and I added a button to change the time. I installed one pushbutton that advances the time when you hold it down and one potentiometer to adjust the brightness:
 
-![](/pictures/ClockButtons.png)
+{% include img_v.html idx=3 %}
 
 The pushbutton works great with a little code update: [new code](/resources/Clock_Run_Update.ino). The potentiometer does dim the lights, but not quite in the way I expected. I added it in series with all the LEDs, assuming that it would simply limit the current and dim each light proportionally. However, it dims the blue lights much more than the red or green and, more interestingly, causes the blue lights to dim when other lights are on (e.g. 5 green lights on causes the blue to be much more dim that 1 green light on). I guess I never claimed to be an electrical engineer\...
 
