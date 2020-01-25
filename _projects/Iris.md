@@ -31,4 +31,4 @@ We've made some good progess, although a lot of our time has been spent defining
 
 We have 2 pages complete, but they aren't the first two pages. I'm waiting until we have page 1 done to start posting them online.
 
-Also, the work necessary to realize the comic has proven to be more than we originally though. Ruth has been too busy to focus on the sketching, so we decided to switch up the roles a little. We're going to use what she's produced for the first 4 pages, then I'm going to take over for the rest of issue 1. We'll see how things work out for issue 1, then decide our approach for issue 2.
+Also, the work necessary to realize the comic has proven to be more than we originally thought. Ruth has been too busy to focus on the sketching, so we decided to switch up the roles a little. We're going to use what she's produced for the first 4 pages, then I'm going to take over for the rest of issue 1. We'll see how things work out for issue 1, then decide our approach for issue 2.
