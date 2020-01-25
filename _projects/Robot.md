@@ -5,6 +5,8 @@ status: ongoing
 
 This is a butler-style robot that takes orders for food and drink and delivers them to you.
 
+<a href="https://www.dropbox.com/sh/1p2adajwfhmlddk/AACoJkiwpoX1KDW8QVOU-KRca?dl=0">Photo gallery</a>
+
 ### Design
 #### Origins
 I originally started this as a project with my college friends. As engineering students, we were into pretty nerdy topics. One time when we were hanging out, the idea came up of building a robot. Although it started out as just a fun idea, we eventually convinced ourselves that we had the skills to really make something like this happen. Once we committed to actually doing it, we designed a robot that could do the following:

@@ -1,5 +1,8 @@
 ---
 title:  "3D Printer Projects"
+pictures:
+    - https://www.dropbox.com/s/139g7psokcbtham/2018-08-29%2007.49.42.jpg?raw=1
+    - https://www.dropbox.com/s/0uc5tcrhcqs2ekn/2018-08-29%2007.51.10.jpg?raw=1
 ---
 
 This is just a collection of interesting things I\'ve made on the 3D printer.
@@ -36,3 +39,9 @@ This is a mod to a nerf gun of mine to allow it to be fired from a computer. You
 This is one of the early designs for the steering on my [robot project](Robot.html).
 
 ![](/pictures/Steering1.png)
+
+### Arduino/Raspberry Pi Stand
+Another part of my [robot project](Robot.html).
+
+{% include img_h.html idx=0 %}
+{% include img_h.html idx=1 %}
