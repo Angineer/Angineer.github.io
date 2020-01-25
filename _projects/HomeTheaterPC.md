@@ -1,6 +1,6 @@
 ---
 title:  "Home Theater PC"
-status: ongoing
+status: complete
 ---
 
 For this project, I embarked on building my own PC for gaming in the living room. I had always been a console person when I was younger, but the idea of being able to tweak my computer to do more interesting things became more of a priority as I got older and could afford it.
@@ -53,3 +53,28 @@ I\'ve been working on the Raspberry Pi relay a little more and have branched it 
 At the same time, I built a new computer which I was hoping to use as my streaming computer. However, after thinking about the various configurations I could use, I decided to go with the following: the beefy computer will be the media computer and stay in the living room for now where we have wired internet; the new computer will be my desktop computer and run off the wifi. I like this because it means that the computer that I built for gaming will be dedicated to the gaming exclusively with Windows and the most stable internet connection, and the desktop computer will run Linux, which I prefer for everyday things.
 
 The new computer is not as powerful my gaming rig, but it is still fast enough for everyday things. And I did spend a little more to buy it new, but I think that I saved plenty of hours by ending my search for a deal I probably won\'t find.
+
+#### Jan 25, 2020
+
+Where is this project now? It's been a long time since I last updated it. 
+
+This started as a project to define and build a home entertainment system for playing video games and watching TV and movies. Over the course of the project, computers and home entertainment have changed, as have my preferences. Since 2015, there has been a big proliferation of home streaming devices (Amazon Fire, Apple TV, Google Chromecast, etc.). Most TVs nowadays have more built-in streaming options than my computer had when I started this project.
+
+I've also shifted my focus away from video games (although I still like to play them every once in a while) and I spend much more time in front of a computer for work, now that I'm doing software engineering. This means that my passion for debugging obscure computer problems tends to dwindle by the time I get home in the evening. With the new options for streaming videos, it's much easier now to just pull up a movie on your laptop and send it to the TV over wifi, so I'm not as hard-pressed to find a cool solution for that. Maybe I'm getting old, but solutions to these problems that "just work" are more appealing to me now than they used to be.
+
+As mentioned earlier, I also spun off the Universal Remote project into its own thing, since that wasn't really in line with my original goals.
+
+So where does that leave me now? I'd say that, although I still enjoy the challenge of tweaking my setup to derive maximum fun from it, I've fallen behind the market in terms of simple solutions to the key problems. The cloud provides essentially unlimited storage for any media that I own, as well as easy and cheap streaming for anything that I don't. Enjoying media within the home is handled by modern streaming protocols that are supported on everyone's devices, including smartphones. My video game library is big enough now that I don't have to time to play the games that I own, nevermind the hot new releases.
+
+All that being said, I did recently upgrade my gaming computer to bring it up to par with modern rigs. Until a month ago, I was still using the skeleton of that original setup from 2013. Here are the new specs:
+
+* Rosewill challenger case (I kept this around)
+* ASRock z390 Pro4 motherboard
+* Intel i7-9700K CPU
+* Rosewill PB120 Liquid CPU cooler
+* 32 GB GSkill Aegis RAM
+* Sapphire Nitro+ RX 590 GPU
+
+I still use the computer that I built in 2015; it lives in the basement and I use it when I'm working on projects down there. I think my old gaming computer will be a hand-me-down for someone that's looking to upgrade. It still has a few good years left and I'd be happy see someone else make good use of it.
+
+So I guess I'm ready to close this project out. It was fun to learn some new tricks along the way, but I'm going to save my attention for other things that I'd like to get done (such as my [butler robot](Robot.html)!).
