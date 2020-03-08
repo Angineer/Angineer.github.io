@@ -1,6 +1,15 @@
 ---
 title:  "Service Robot"
 status: ongoing
+pictures:
+    - https://www.dropbox.com/s/b1wpww1ykkzr58a/2020-02-08%2016.23.46.jpg?raw=1
+    - https://www.dropbox.com/s/1fnnpzlmy7ah7ik/2020-02-08%2016.23.33.jpg?raw=1
+    - https://www.dropbox.com/s/2qmq8nfte1d4tut/2020-02-23%2017.54.55.jpg?raw=1
+    - https://www.dropbox.com/s/tkv8kfpykya8f1e/2020-02-27%2022.03.21.jpg?raw=1
+    - ?raw=1
+    - ?raw=1
+    - ?raw=1
+    - ?raw=1
 ---
 
 This is a butler-style robot that takes orders for food and drink and delivers them to you.
@@ -194,3 +203,56 @@ Second, I've done some work on the coding side. I rearranged things a little bit
 
 The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video: [Ordering System](https://youtu.be/Y87iaBGqlAw).
 
+#### Jan 26, 2020
+Every year, I set new year's resolutions, and I have included finishing the robot project every year for the last 7 years. Last year I felt pretty good about being able to finish everything, since I did a lot of the systems engineering work and had a good idea of what I was trying to accomplish. I made good progress, but still wasn't able to wrap it up. So I'm trying again this year.
+
+I started this month by working on the coding side. Robie needs some way to figure out where he is so that he can wait at the base station for orders and stop when he gets to his destination as part of the delivery. I've had a few ideas for how to do this including RFID or some kind of simple proximity sensor. I decided to try doing it with vision. I decided this because the Raspberry Pi has built-in (and cheap) camera support and because I wanted to try out this type of sensing. In particular, I wanted to learn about how to use [apriltags](https://github.com/AprilRobotics/apriltag). Apriltags are ubitquitous in robotics and I've never used them before, so I thought this would be a good opportunity.
+
+For something as simple as reading an image from disk, I assumed that there would be a very simple library available. As it turns out, the truth is more complicated. There are existing libraries for jpegs, but they are not exactly plug and play. OpenCV is super simple, but it requires building from source on the Raspberry Pi, which includes gigabytes of features that I don't care about. In the end, I just wrote my own function for reading bitmaps. I didn't know anything about the format, so it was kind of neat to learn. Of course, it would have been even better to just grab an image from the camera and keep it in memory, but that leads to the other issue that makes this complicated...
+
+Grabbing an image from the Raspberry Pi camera is super easy if you use their [command line tool](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md), but the only option for handling the resulting data is to save it to disk. Again, OpenCV would greatly simplify this, but I don't want all that overhead. I assume that I could figure out how to grab the images directly in my program (especially since the Raspberry Pi app is open source), but I'm leaving this as an area for optimization in the future. At this point, I've strung together the different components well enough that I can move forward with testing. As always, the latest updates are on my [Github](https://github.com/Angineer) page.
+
+#### Feb 1, 2020
+I'm at the point now where I can basically test the entire system's functionality. I made a little masking tape track in the basement and have some starting apriltags, plus I added a little extra state management software so Robie knows when he's delivering an order and when he's headed back home. It's a little janky, but it shows off how everything will come together in the end:
+
+<video controls="controls" style="width:300px">
+  <source type="video/mp4" src="https://www.dropbox.com/s/bt7l27rs5mb276t/VID_20200201_130308499.mp4?raw=1"></source>
+</video>
+
+#### Feb 8, 2020
+I've taken the robot to my local hackerspace, [HackPGH](https://www.hackpgh.org). I thought that, by keeping it there, it would be easier to get large chunks of work done since I would have access to all the tools I need in the same place. I also thought that sharing my progress with fellow hackers could be an extra motivator to get things accomplished.
+
+In transporting the components, I realized that they are pretty susceptible to damage from movement, so today I started out by attaching the circuitry to the base of the dispenser:
+
+{% include img_h.html idx=0 %}
+
+Then, I cut out and attached some parts of the chute where food will fall when it is dispensed:
+
+{% include img_v.html idx=1 %}
+
+#### Feb 15, 2019
+The apriltag processing components are pretty slow, to the point that I'm not sure if they will be reliable in the final product. So today, I went back to the image processing and tried to implement some optimizations. The actual processing side of things (i.e. not the `raspistill` process) is now split out into two components. One pings the camera to request a new image, then uses ionotify to wait for the image to be written to disk and reads it into memory. The other object waits for the first one to read a new image, grabs it, and does the apriltag detection.
+
+I came up with a triple buffer system to try to minimize contention and improve throughput; each thread works on data in its own buffer, then swaps with a shared buffer in order to exchange data with the other thread. This worked out pretty well, but still isn't very fast on the Raspberry Pi. The best optimization I could come up with is reducing the image resolution, which decreases tag detection accuracy. This is an area that I will have to come back to again, probably to completely eliminate writing to disk.
+
+#### Feb 23, 2020
+The focus today was on getting the line following working well so I can lay down a full track for testing. The line following hardware works with both a dark line on light background and a light line on dark background. It also has a knob for adjusting the LED power so you can tune it for whatever surface you're working with. At the hackerspace, we have a light blue floor, so I wasn't sure which configuration would work best.
+
+I started by testing dark blue painter tape directly on the floor, but it didn't work too well. I learned that the floor, while being light in color, is acutally pretty absorptive with the IR light. Next, I tried printing out some black lines on white paper and taping them to the floor with masking tape:
+
+{% include img_h.html idx=2 %}
+
+Next I tried inverting the hardware to look for a light-colored line and using reflective tape:
+
+<video controls="controls" style="width:300px">
+  <source type="video/mp4" src="https://www.dropbox.com/s/jtemk4y4733mxdt/VID_20200223_181442553.mp4?raw=1"></source>
+</video>
+
+This worked pretty well and I think I'll use this layout in the future. I'll have to buy some tapes and test them to find out what works best.
+
+The other thing I learned today is that the width of the line is important. If it's too thin, it can be hard to detect and causes a lot of oscillation, which can turn into instability. A line that is wide enough to be picked up by at least two sensors in the array at once is much better.
+
+#### Feb 27, 2020
+I added some more components to the chute. It's starting to look pretty good:
+
+{% include img_v.html idx=3 %}
