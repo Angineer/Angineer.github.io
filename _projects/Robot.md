@@ -6,7 +6,7 @@ pictures:
     - https://www.dropbox.com/s/1fnnpzlmy7ah7ik/2020-02-08%2016.23.33.jpg?raw=1
     - https://www.dropbox.com/s/2qmq8nfte1d4tut/2020-02-23%2017.54.55.jpg?raw=1
     - https://www.dropbox.com/s/tkv8kfpykya8f1e/2020-02-27%2022.03.21.jpg?raw=1
-    - ?raw=1
+    - https://www.dropbox.com/s/4bgf9j9cu7gprvc/2020-05-19%2022.41.46.jpg?raw=1
     - ?raw=1
     - ?raw=1
     - ?raw=1
@@ -25,18 +25,12 @@ I originally started this as a project with my college friends. As engineering s
 * Be able to navigate an interior space and avoid obstacles
 * Be built from scratch wherever possible (avoid using kits)
 
-With those basic ideas, we came up with a list of parts, including motors, a battery, and some valves. At this point, we were still pretty naive about how things would all come together; I was of the mind that once we had all the components, the robot would pretty much assemble itself. In retrospect, we had no idea how long a project like this would take and how expensive it would be.
-
-As poor college students, we didn't have nearly enough money to buy all the parts we decided to get. We brainstormed and came up with the idea of funding the project by redeeming beverage containers on campus (as there was no shortage of those). Using that money and some small contributions from our own pockets, we bought servos, DC motors, a battery, and some of the power management and motor driver circuits. However, we didn't get the chance to really put all the components together into a functional platform. Also, some mixup with the valves that I ordered resulted in them never getting delivered, so the drink mixing component unwittingly took a backseat to the mobile platform.
-
-So at this point, the design was really nothing more than some components and the belief that all the integration would come to us naturally. Here is the list of components that we bought:
+With those basic ideas, we came up with a list of parts, including motors, a battery, and some valves. The design was really nothing more than some components and the belief that all the integration would come to us naturally. Here is the list of components that we bought:
 
 * 1 x 12V Lead Acid Battery
 * 2 x 322HD Hobby Servos
 * 2 x 12V Jameco DC motors
 * 2 x Maxbotix Ultrasonic Rangers
-
-One main issue I ran into during this phase was the weight of the robot. The chassis we had started with was a gigantic steel box that put some strain on the drive motors and steering hardware.
 
 #### Some Added Perspective
 After a lot of work on the project, but not a lot of progress toward a concrete goal, I added some more extensive design information. First, I created a set of goals and requirements for the project:
@@ -69,8 +63,39 @@ Finally, I created a work breakdown based on the requirements and architecture t
 
 ### Build Log
 
+#### 2010
+At this point, we were still pretty naive about how things would all come together; I was of the mind that once we had all the components, the robot would pretty much assemble itself. In retrospect, we had no idea how long a project like this would take and how expensive it would be.
+
+As poor college students, we didn't have nearly enough money to buy all the parts we decided to get. We brainstormed and came up with the idea of funding the project by redeeming beverage containers on campus (as there was no shortage of those). Using that money and some small contributions from our own pockets, we bought servos, DC motors, a battery, and some of the power management and motor driver circuits. However, we didn't get the chance to really put all the components together into a functional platform. Also, some mixup with the valves that I ordered resulted in them never getting delivered, so the drink mixing component unwittingly took a backseat to the mobile platform.
+
+One main issue I ran into during this phase was the weight of the robot. The chassis we had started with was a gigantic steel box that put some strain on the drive motors and steering hardware.
+
+College stories
+- Collecting cans
+- Steel box from scrap at LRC
+- Plasma cutter
+
 #### 2011
-After I graduated college, I used my spare time to design and build the initial steering hardware. My goal was simply to get the robot driving around, which I accomplished: [The steel box design](https://youtu.be/j0Zf290-C6U). As you can probably tell, the steering hardware was fairly shoddy, mostly because I didn't have access to any tools to machine it properly.
+After I graduated college, I used my spare time to design and build the initial steering hardware.
+- Wheels off an RC car
+- Cut, tried to tap angles at McGuckins
+- Bought rod, crimps at McGuckins
+- Visit to guy's shed shop
+
+Bought motor driver circuit and got it running (video). Emphasis on not wanting to use kits.
+
+My goal was simply to get the robot driving around, which I accomplished: [The steel box design](https://youtu.be/j0Zf290-C6U). As you can probably tell, the steering hardware was fairly shoddy, mostly because I didn't have access to any tools to machine it properly.
+
+Discussion of rack and pinion design
+
+Heavy lead acid battery
+
+#### Sometime between 2011 and 2014
+Discovered SSD, got distracted by other projects.
+
+Bought new wheels since the old ones sucked.
+
+Designed and 3D printed ultrasonic mount based on designs on the internet. First time I got to use a 3D printer.
 
 #### April 24, 2014
 I'm finally getting back into working on this project. The 2 areas I'm focused on right now are getting better steering hardware built and finalizing the circuitry. The motor driver is an L298 H-bridge circuit. Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
@@ -79,6 +104,8 @@ I'm finally getting back into working on this project. The 2 areas I'm focused o
 ![](/pictures/PCBMotorCircuit.png)
 
 You can also see that the new chassis is a plastic box. This is both much lighter than the steel one and allows you to see what's happening inside, which is kind of cool.
+
+Bought box at McGuckins
 
 #### March 13, 2015
 Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've designed and 3D printed a steering assembly:
@@ -124,6 +151,13 @@ I thought it was fun designing and building the steering, but in order to keep t
 ![](/pictures/Steering3.png)
 
 While making the code update to implement the new steering, I also changed the algorithm a little. Before, any object caused the robot to back up and turn a specific amount; I added randomness by changing directions when there were no obstacles detected. Now, the amount of time that robot backs up is random, so, after he avoids an obstacle, the new direction he faces is never the same: [New Algorithm](https://youtu.be/w-Gu0EnD35M)
+
+#### Summer 2017
+Base design considerations
+
+Looking for dispenser
+
+Beginning of communication aspects, learning sockets for client/server design
 
 #### January 12, 2018
 The robot has been on hold for a little bit while I've been in school getting my master's degree in [Robotic Systems Development](https://mrsdprojects.ri.cmu.edu/2016teami/). Luckily, this means that I can apply some of my new skills to this project.
@@ -179,6 +213,8 @@ I've got a lot more room to build, which has helped me make good progress on the
 
 ![](/pictures/Robot_BaseFrame.png)
 
+Conveyer from children's hay elevator toy
+
 #### Aug 12, 2018
 The design of the power electronics for the mobile platform has been a sticking point because I've been unsure of how to approach the battery charging. I envisioned an auto-charging system where Robie would drive up to the base and make some kind of magnetic connection to a [charging circuit](/resources/robie_mobile_power.pdf). But I also wanted to switch battery chemistry from lead acid to something lighter.
 
@@ -200,6 +236,8 @@ First, I did some machining and assembly of the base station. The main takeaway 
 ![](/pictures/Robot_Conveyors_1.png) ![](/pictures/Robot_Conveyors_2.png)
 
 Second, I've done some work on the coding side. I rearranged things a little bit to update the style and also to make everything more modular. The coolest addition is Bluetooth communication between the Raspberry Pis; now the base and the mobile platform can communicate with each other. You can see the updates on my [Github](https://github.com/Angineer) page.
+
+Discussion of bluetooth socket comms
 
 The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video: [Ordering System](https://youtu.be/Y87iaBGqlAw).
 
@@ -256,3 +294,49 @@ The other thing I learned today is that the width of the line is important. If i
 I added some more components to the chute. It's starting to look pretty good:
 
 {% include img_v.html idx=3 %}
+
+#### May 19, 2020
+Just as soon as I started working on the robot at HackPGH, the global coronavirus pandemic hit, and I had to move operations back home. I decided to dive into the issue of the slow apriltag processing:
+
+{% include img_h.html idx=4 %}
+
+My first attempt at this was to create a stripped-down verison of raspistill. I didn't know much about the underlying libraries (primarily MMAL), so it was difficult and slow-going. After spending a few days on this, I decided to take a different approach: instead of stipping down raspistill, I would just compile it as a library and slightly modify the objects so they could be called from my c++ program.
+
+#### July 12, 2020
+Success! After a couple months of slogging though the camera capture code, I have a new version that grabs images directly from the sensor and detects the apriltags. The new, straight-to-memory approach is much faster, but it still has a few issues to debug:
+- Because I wasn't running the full raspistill program, I had to manually adjust things like exposure and white balance
+- 
+
+Robie is now set up in the basement on a test track of masking tape:
+
+{% include img_h.html idx=4 %}
+
+This is the closest that Robie has felt to completion and it's satisfying to run a full order through the system.
+
+#### July 21, 2020
+I've moved Robie upstairs into our dining room, so that I can finally start testing him in a real world environment. The next step will be setting up the track that he's going to follow. Based on my testing back in February, I decided to build my line out of reflective tape on black paper.
+
+Issues with black construction paper
+
+#### Aug 2, 2020
+Fixing bugs
+
+#### Aug 9, 2020
+Redo track with just the tape
+
+Tidying up the code
+
+#### Aug 15, 2020
+Build up the box
+
+Issues with apriltag placement close to the camera
+
+Issues with lack of shielding for servo--he's just nervous
+
+#### Aug 16, 2020
+Introduction of auto-docking
+
+#### Aug 21, 2020
+Done?!
+
+Note: have to collect all my pictures and put them in the folder
