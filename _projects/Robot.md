@@ -64,48 +64,56 @@ Finally, I created a work breakdown based on the requirements and architecture t
 ### Build Log
 
 #### 2010
-At this point, we were still pretty naive about how things would all come together; I was of the mind that once we had all the components, the robot would pretty much assemble itself. In retrospect, we had no idea how long a project like this would take and how expensive it would be.
+It all started late at night in my college dorm in Troy, NY. Some friends and I were hanging out, goofing around, when the idea of building a robot came up. We were smart engineers, we knew how these things worked--how hard could it be? I was of the mind that once we had all the components, the robot would pretty much assemble itself, so we started laying out some plans. See the design section above for more info. In retrospect, we had no idea how long a project like this would take and how expensive it would be.
 
-As poor college students, we didn't have nearly enough money to buy all the parts we decided to get. We brainstormed and came up with the idea of funding the project by redeeming beverage containers on campus (as there was no shortage of those). Using that money and some small contributions from our own pockets, we bought servos, DC motors, a battery, and some of the power management and motor driver circuits. However, we didn't get the chance to really put all the components together into a functional platform. Also, some mixup with the valves that I ordered resulted in them never getting delivered, so the drink mixing component unwittingly took a backseat to the mobile platform.
+As poor college students, we didn't have nearly enough money to buy all the parts we decided to get. We brainstormed and came up with the idea of funding the project by redeeming beverage containers on campus (as there was no shortage of those). Using that money and some small contributions from our own pockets, we bought servos, DC motors, and a battery.
 
-One main issue I ran into during this phase was the weight of the robot. The chassis we had started with was a gigantic steel box that put some strain on the drive motors and steering hardware.
+In parallel, we were on the lookout for some scrap that could be repurposed into the chassis. At the time, I was working in a lab at the Lighting Research Center. They had a bunch of old parts lying around that needed cleaning up, including a steel box from a fiber optic project. Since it was already headed for the scrap pile, they said that I could take it home. After pulling out and discarding the leftover components, we had the start of a robot.
 
-College stories
-- Collecting cans
-- Steel box from scrap at LRC
-- Plasma cutter
+In order to attach the DC and servo motors, we needed to prep the box a little. We could easily drill holes for the mounting screws, but we needed a slot cut in the box that could hold the servo. We asked at one of the machine shops on campus, and they suggested we cut it out on the plasma cutter. Since it was such a simple operation, they were able to program and cut it up in a few minutes. This was the first time we got to see the plasma cutter in action and it was pretty rad.
 
-#### 2011
-After I graduated college, I used my spare time to design and build the initial steering hardware.
-- Wheels off an RC car
-- Cut, tried to tap angles at McGuckins
-- Bought rod, crimps at McGuckins
-- Visit to guy's shed shop
-
-Bought motor driver circuit and got it running (video). Emphasis on not wanting to use kits.
-
-My goal was simply to get the robot driving around, which I accomplished: [The steel box design](https://youtu.be/j0Zf290-C6U). As you can probably tell, the steering hardware was fairly shoddy, mostly because I didn't have access to any tools to machine it properly.
-
-Discussion of rack and pinion design
-
-Heavy lead acid battery
+Despite the progress we made, we didn't get to really put all the components together into a functional platform. Also, I ordered valves for the drink dispenser, but some mixup resulted in them never getting delivered, so the drink mixing component unwittingly took a backseat to the mobile platform.
 
 #### Sometime between 2011 and 2014
-Discovered SSD, got distracted by other projects.
+After I graduated college, I used my spare time to design and build the initial steering hardware. I didn't know much about different steering designs, so I attempted to imitate the rack and pinion style on a car, but with a servo motor attached directly to the rack in place of the gears:
 
-Bought new wheels since the old ones sucked.
+(sketch)
 
-Designed and 3D printed ultrasonic mount based on designs on the internet. First time I got to use a 3D printer.
+It was pretty naive, but my goal was simply to get the robot driving around.
+
+It was around this same time that I discovered [Solid State Depot](https://boulderhackerspace.com/) (SSD), my local hackerspace. I was pretty enthralled by the awesome tools and people there. They also had raw materials, including a few scrap pieces that I used to start building my robot's steering.
+
+The first component I worked on was the angle pieces. I found a small piece of steel, cut it into the right shapes, and drilled the holes I needed. However, SSD didn't have a set of taps at the time, so I wasn't able to add the threads I needed.
+
+For the next part of the story, we need to take a little detour. Boulder, Colorado is an eclectic place with lots of interesting treasures to discover. One of those unique aspects is [McGuckin Hardware](https://www.mcguckin.com/). If you ever go to Boulder, you really should visit this establishment. Sure, it's a hardware store, but it feels like a disservice to describe it as just that. They have all the typical goods and services, but it's infused with a local flavor that is really unlike any other hardware store I've been to. One of the services they offer is simple machining. Since I needed some threads cut in my steering parts, I decided to give them a shot.
+
+The person I interacted with was more than happy to help me out, but the results were not very good. Either the particular piece of steel that I pulled out of the scrap pile was harder than expected, or he simply wasn't prepared to cut it, but the tap broke off in the hole. It felt like a setback. But then, the manager of the shop gave me contact info for a machinist who might be able to help me out using his personal shop. I hadn't ever tried something like this before, but, hey--why not?
+
+I called the fellow and arranged a time to swing by. He lived in a trailer toward the outskirts of town and his entire shop was inside a small (probably 6ft x 10ft) shed next door. The entire thing was packed tight with all his tools, and it was obvious that he had been doing this for a while. He took a look at the piece, pulled out his tap set, and got to work. It turns out that, sometimes, all you need to get things done right is some experience and a little patience. I settled up, thanked him for his help, and headed home with my freshly-machined pieces. Looking back on it later, it was really a pretty neat experience.
+
+Around the same time, I bought some motor driver circuit components and got the motors spinning via an Arduino. Because one of the goals of the project was to build things from scratch and avoid kits, I chose to buy an L298 H-bridge chip and assemble the circuit myself on a solderless breadboard. You can see the result here:
+
+(video)
+
+To finish out the steering components, I pulled the wheels off an RC car and bought some steel rod and connectors at--you guessed it--McGuckins. A little assembly and the robot was finally on the move: [the steel box design](https://youtu.be/j0Zf290-C6U). As you can probably tell, the steering hardware was pretty shoddy at this point. I think it's safe to describe it as a "learning experience."
+
+One main issue I ran into during this phase was the weight of the robot. The steel box and lead acid battery put some real strain on the drive motors and steering hardware. Once again, McGuckins came to my rescue in the form of a new chassis, which was a plastic box. In addition to being much lighter than the steel one, this box allows you to see what's happening inside, which is kind of cool.
+
+Two more important aspects of the robot developed in this timeframe. First, I replaced the wheels on the robot with a nicer set (<https://www.pololu.com/product/1430>), since the RC car wheels were damaged when I installed them. Second, I decided to add a little obstacle avoidance to the robot. The sensor I chose is an ultrasonic range finder from Parallax: <https://www.pololu.com/product/1605>. But truly, the most important thing that I added was the mount for the ranger.
+
+I wanted to mount the ultrasonic ranger to one of the servos so that the robot could move it around while driving. This was a perfect application for a 3D printer, and SSD happened to have a couple that I could use. There were designs for this part online, but they weren't available for free. I always enjoyed doing 3D modeling in school, so I decided to design and print my own.
+
+This was the first time that I used a 3D printer and--let me tell you--it was truly exhilarating. You might think I'm exaggerating, but I really was so excited by this interaction that I couldn't stop thinking about it for the next couple weeks. There was just so much power in the notion that I could imagine a part in my head, design it in CAD, and have a prototype on my desk within hours. It also was one of the first new skills that I learned from a fellow member at SSD. I have come to believe very strongly in the importance of sharing our skills and knowledge with others, and this experience is at the heart of it.
+
+After a few iterations, the ultrasonic ranger was mounted and [ready to go](/projects/3DPrintedParts.html#servo-mount).
 
 #### April 24, 2014
-I'm finally getting back into working on this project. The 2 areas I'm focused on right now are getting better steering hardware built and finalizing the circuitry. The motor driver is an L298 H-bridge circuit. Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
+Over the last couple years, I got more involved with SSD and got distracted by other projects, such as my [binary clock](/projects/BinaryClock.html).
+
+I'm finally getting back into working on this project. The 2 areas I'm focused on right now are getting better steering hardware built and finalizing the circuitry. Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
 
 ![](/pictures/MotorTest.png)
 ![](/pictures/PCBMotorCircuit.png)
-
-You can also see that the new chassis is a plastic box. This is both much lighter than the steel one and allows you to see what's happening inside, which is kind of cool.
-
-Bought box at McGuckins
 
 #### March 13, 2015
 Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've designed and 3D printed a steering assembly:
