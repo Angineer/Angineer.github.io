@@ -108,20 +108,20 @@ This was the first time that I used a 3D printer and--let me tell you--it was tr
 After a few iterations, the ultrasonic ranger was mounted and [ready to go](/projects/3DPrintedParts.html#servo-mount).
 
 #### April 24, 2014
-Over the last couple years, I got more involved with SSD and got distracted by other projects, such as my [binary clock](/projects/BinaryClock.html).
+Over the last couple years, I've more involved with SSD and got distracted by other projects, such as my [binary clock](/projects/BinaryClock.html). But now I'm finally getting back into working on the robot. The 2 areas I'm focused on right now are redoing the steering hardware and finalizing the circuitry. Now that I have access to 3D printing, I'm going to try to build a more-polished steering system that uses the same basic design as the old one.
 
-I'm finally getting back into working on this project. The 2 areas I'm focused on right now are getting better steering hardware built and finalizing the circuitry. Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
+Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
 
 ![](/pictures/MotorTest.png)
 ![](/pictures/PCBMotorCircuit.png)
 
 #### March 13, 2015
-Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've designed and 3D printed a steering assembly:
+Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've 3D printed the new steering assembly:
 
 ![](/pictures/Steering1.png)
 ![](/pictures/Steering2.png)
 
-You can see that it is like a rack and pinion but instead of a gear, the rack is directly connected to a servo. Currently, it's really a piece of crap, but I am trying to just get the robot back up and running again, then I will work on fine tuning things. In addition, I recently undid the progress in my last post by blowing up the motor driver chip. So now I'm in the process of buying and resolding that circuit. It's a pain when you do something so dumb, but I guess that's part of learning:
+Currently, it's really a piece of crap, but I am trying to just get the robot back up and running again, then I will work on fine tuning things. In addition, I recently undid the progress in my last post by blowing up the motor driver chip. So now I'm in the process of buying and resolding that circuit. It's a pain when you do something so dumb, but I guess that's part of learning:
 
 ![](/pictures/Whoops.png)
 
@@ -133,7 +133,7 @@ As promised, it is working again: [Robot Test](https://youtu.be/zMsPi7ghxFU).
 I rewired the driver circuit and hooked up the two servos, plus I did some organizing of components in the box and added some strain reliefs. I also included a key switch, so you have to have the keys to turn it on (and off). I also bought a battery charger so I can have some extended testing sessions without worrying about draining it down too low for long periods at a time.
 
 #### July 26, 2015
-More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA-printed steering assembly tends to melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.
+More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA steering assembly will melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.
 
 I have overcome the power issue by rearranging how I ran the power through the system. I originally had a switching voltage rectifier to bring the 12V battery down to 6V, which I was going to use to power the servos and the Arduino. I added a lot of capacitors at various points throughout to try to eliminate the noise in that circuit, but couldn't beat it. It then occurred to me to try to run the 12V directly into the Arduino, then run the servos off the Arduino's 5V pin. As it turns out, that was exactly what I needed.
 
@@ -161,21 +161,18 @@ I thought it was fun designing and building the steering, but in order to keep t
 While making the code update to implement the new steering, I also changed the algorithm a little. Before, any object caused the robot to back up and turn a specific amount; I added randomness by changing directions when there were no obstacles detected. Now, the amount of time that robot backs up is random, so, after he avoids an obstacle, the new direction he faces is never the same: [New Algorithm](https://youtu.be/w-Gu0EnD35M)
 
 #### Summer 2017
-Base design considerations
+Since my last post, the robot has been on hold for a little bit while I've been in school getting my master's degree in [Robotic Systems Development](https://mrsdprojects.ri.cmu.edu/2016teami/). Now that I'm on summer break, I can devote some time to it again. And, luckily, this means that I can apply some of my new skills to this project. 
 
-Looking for dispenser
+The main thing that I've gained from the master's program is a perspective on systems engineering. The basic philosophy behind systems engineering is that you should design a system before you start implementing it. This will save you time and money by illuminating obscure issues early and it will ensure that all system components are going towards fulfilling a set of clear system requirements. Without this perspective, projects can tend to get bloated or behind schedule (a symptom I've noticed in this project in particular). So, with that in mind, I've created a set of design documents that I think will help me complete the robot by the end of next year. You can see the updates in the Design section above.
 
-Beginning of communication aspects, learning sockets for client/server design
+In addition to the systems engineering additions, I have started working on the design for the base station where the food will be dispensed. I drew up a few designs on paper and wrote a bunch of code that makes up the foundational software components of the base station. I am writing it in C++ to build up my skills with that and CMake. All the code can be found on my [Github page](https://github.com/Angineer).
 
-#### January 12, 2018
-The robot has been on hold for a little bit while I've been in school getting my master's degree in [Robotic Systems Development](https://mrsdprojects.ri.cmu.edu/2016teami/). Luckily, this means that I can apply some of my new skills to this project.
+For the mechanical design of the base, I imagine it will basically be a vending machine with some interface for the robot. I started out looking for cheap, small vending machines to purchase, but it turns out that such a thing doesn't exist. You can certainly buy small vending machines, but they ain't cheap. So, instead of buying one, I started to think about how to build one. My design is basically a set of parallel conveyer belts that all dump their contents into a chute that empties out onto the robot. Conveyer belts are another thing that are difficult to purchase for cheap, but I managed to find a [kids toy](https://www.outbacktoystore.com/1-16th-Conveyor-Belt-Elevator-by-Bruder) that I think I can effectively adapt for my purposes.
 
-The main thing that I've gained from the master's program is a perspective on systems engineering. The basic philosophy behind systems engineering is that you should design a system before you start implementing it. This will save you time and money by illuminating obscure issues early and it will ensure that all system components are going towards fulfilling a set of clear system requirements. Without this perspective, projects can tend to get bloated or behind schedule (a symptom I've noticed in this project in particular). So, with that in mind, I've created a set of design documents that I think will help me complete the robot by the end of the year. You can see the updates in the Design section above.
-
-In addition to the systems engineering, I have written a bunch of code which makes up the foundational software components of the base station. I am writing it in C++ to build up my skills with that and CMake. All the code can be found on my [Github repo](https://github.com/Angineer/Robot-Mobile).
+On the code side of things, I'm pretty happy with what I've written so far. I made a set of client/server objects that communicate with each other over sockets using a simple third-party serialization library. I had never worked with sockets, serialization, or client/server design before, so it was fun to see everything come together. The tools are actually simple enough that I might be able to use them for future projects.
 
 #### Feb 1, 2018
-I spent the day today working on the base design. I've created a preliminary design in FreeCAD based on a hand-drawn design that I made last summer:
+I spent the day today working on the base design. I've created a preliminary design in FreeCAD based on my hand-drawn design from last summer:
 
 ![](/pictures/Robot_BaseOrig1.png)
 ![](/pictures/Robot_BaseOrig2.png)
@@ -186,7 +183,7 @@ It's going to take some more time to get the entire design ready because I'm lea
 I also started hacking away at some of the components for the base and robot and found some gaps in my materials or preparation, so I had to order a few parts.
 
 #### Feb 19, 2018
-I've spent a little more time on the base design. Specifically, I've been thinking about how to make the charging connection between the mobile platform and the base. I think that I will use a magnetic connector like the ones used for Mac laptops. The connector needs to have some alignment features, so I've added that to the robot side. It will also need flexibility, so I added a compression spring to the base side. This will hold it in place but allow some movement during alignment:
+I've spent a little more time on the base design. Specifically, I've been thinking about how to make a connection between the mobile platform and the base so that the robot can charge itself when it's not in use. I think that I will use a magnetic connector like the ones used for Mac laptops. The connector needs to have some alignment features, so I've added that to the robot side. It will also need flexibility, so I added a compression spring to the base side. This will hold it in place but allow some movement during alignment:
 
 ![](/pictures/Robot_PowerConnector.png)
 
@@ -206,7 +203,7 @@ After some time away and armed with new knowledge, I looked at the existing C++ 
 * Second, I tore up and replaced some of my simplistic code with some more sophisticated components, especially parts that dealt with C-style strings.
 * Third, I separated out the inventory and communication code into a separate library so it was available to be linked to the HTTP server and for any apps that I wrote in the future.
 
-Once I had those revisions complete, I focused on writing the HTTP server code so users could interact with the inventory. I was unsure how to approach this part, since HTTP doesn't have a standard implementation in C++. I knew I could write a server myself, but I didn't want to go through such a hassle for something that had already been implemented many times before. I ended up finding a [simple server](https://github.com/eidheim/Simple-Web-Server) off of which I could base my own. 
+Once I had those revisions complete, I focused on writing the HTTP server code so users could interact with the inventory. I was unsure how to approach this part, since HTTP doesn't have a standard implementation in C++. I knew I could write a server myself, but I didn't want to go through such a hassle for something that had already been implemented many times before. I ended up finding a [simple server](https://github.com/eidheim/Simple-Web-Server) that I could fork to my own. 
 
 In making the HTTP server interact with the inventory server, I realized that I really needed to have some kind of administrative interface for checking on and updating the inventory. To create this, I converted my old test client--which was just for debugging the communications--into a full admin client. This revealed a number of issues with my original design, which I fixed up as I went.
 
@@ -221,7 +218,7 @@ I've got a lot more room to build, which has helped me make good progress on the
 
 ![](/pictures/Robot_BaseFrame.png)
 
-Conveyer from children's hay elevator toy
+You can see one of the conveyer belts that I purchased sitting on top, roughly where it will be when the base is done.
 
 #### Aug 12, 2018
 The design of the power electronics for the mobile platform has been a sticking point because I've been unsure of how to approach the battery charging. I envisioned an auto-charging system where Robie would drive up to the base and make some kind of magnetic connection to a [charging circuit](/resources/robie_mobile_power.pdf). But I also wanted to switch battery chemistry from lead acid to something lighter.
@@ -245,7 +242,7 @@ First, I did some machining and assembly of the base station. The main takeaway 
 
 Second, I've done some work on the coding side. I rearranged things a little bit to update the style and also to make everything more modular. The coolest addition is Bluetooth communication between the Raspberry Pis; now the base and the mobile platform can communicate with each other. You can see the updates on my [Github](https://github.com/Angineer) page.
 
-Discussion of bluetooth socket comms
+I'm particularly happy with how the bluetooth worked out because it's integrated into my existing client/server library. Now users just need to select which type of socket they want to use (IP or Bluetooth) when they connect. The rest works exactly the same way. Pretty slick!
 
 The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video: [Ordering System](https://youtu.be/Y87iaBGqlAw).
 
@@ -304,37 +301,45 @@ I added some more components to the chute. It's starting to look pretty good:
 {% include img_v.html idx=3 %}
 
 #### May 19, 2020
-Just as soon as I started working on the robot at HackPGH, the global coronavirus pandemic hit, and I had to move operations back home. I decided to dive into the issue of the slow apriltag processing:
+Just as soon as I started working on the robot at HackPGH, the global coronavirus pandemic hit, and I had to move operations back home. Since I was stuck at home with extra time on my hands, I decided to dive into the issue of the slow apriltag processing:
 
-{% include img_h.html idx=4 %}
+(image)
 
-My first attempt at this was to create a stripped-down verison of raspistill. I didn't know much about the underlying libraries (primarily MMAL), so it was difficult and slow-going. After spending a few days on this, I decided to take a different approach: instead of stipping down raspistill, I would just compile it as a library and slightly modify the objects so they could be called from my c++ program.
+My first attempt at this was to create a stripped-down verison of raspistill. I didn't know much about the underlying libraries (primarily MMAL), so it was difficult and slow-going. After spending a few days on this, I decided to take a different approach: instead of using just a few components from raspistill, I would compile it as a library and slightly modify the objects so they could be called from my c++ program.
 
 #### July 12, 2020
-Success! After a couple months of slogging though the camera capture code, I have a new version that grabs images directly from the sensor and detects the apriltags. The new, straight-to-memory approach is much faster, but it still has a few issues to debug:
-- Because I wasn't running the full raspistill program, I had to manually adjust things like exposure and white balance
-- 
+Success! After a couple months of slogging though the camera capture code, I have a new version that grabs images directly from the sensor and detects the apriltags. The new, straight-to-memory approach is much faster, but it has the drawback that, because I wasn't running the full raspistill program, I had to manually adjust things like exposure and white balance. I'll have to see how well this works in the final installation location (wherever that may be).
 
 Robie is now set up in the basement on a test track of masking tape:
 
-{% include img_h.html idx=4 %}
+(image)
 
 This is the closest that Robie has felt to completion and it's satisfying to run a full order through the system.
 
 #### July 21, 2020
-I've moved Robie upstairs into our dining room, so that I can finally start testing him in a real world environment. The next step will be setting up the track that he's going to follow. Based on my testing back in February, I decided to build my line out of reflective tape on black paper.
+I've moved Robie upstairs into our dining room so that I can finally start testing him in a real world environment. The next step will be setting up the track that he's going to follow. Based on my testing back in February, I decided to build my line out of reflective tape on black paper.
 
-Issues with black construction paper
+I purchased some [3M reflective tape](https://www.3m.com/3M/en_US/company-us/all-3m-products/~/3M-Engineer-Grade-Prismatic-Reflective-Sheeting-3430-White-Roll-Configurable/?N=5002385+3294775753&rt=rud) for the track, and some black construction paper on which to lay it. The tape is really excellent quality and works great. The construction paper, though, is a hunk of junk. I wanted something to absord the IR light, and it turns out that the paper is nearly as reflective as the tape! This was a frustrating discovery, since I had already bought a pack of it and laid about 10 feet of track before testing it.
+
+Luckily, the floors in our house are much less reflective than the tape, so I was able to use the tape exclusively. This was a nice benefit, since it means that the track has a much smaller footprint and will be less disruptive to my wife and I as we walk through the area. It does mean that the track is not as secure, though, since I'm not willing to apply the tape directly to our wood floors.
 
 #### Aug 2, 2020
-Fixing bugs
+There were a number of latent bugs in the system that I had never gotten around to fixing, so I took the time to squash a few of them today:
+- Fix saving the inventory to disk whenever it changes
+- Load the delivery locations from a configuration file
+- Use 1-indexing for the locations, since 0 is reserved for the home station
+- Enable dispensing from both of the slots in the dispenser
 
 #### Aug 9, 2020
-Redo track with just the tape
+Today I built out the entire track using my reflective tape. It only runs from the dining room to the living room and back, but that's enough as a proof of concept:
 
-Tidying up the code
+(image)
+
+I also spent some time tidying up the code. Now, both the mobile platform and base station programs are running as systemd services that will start when the computers boot up, so I don't have to log in to get things running.
 
 #### Aug 15, 2020
+Birthday/baby en route!
+
 Build up the box
 
 Issues with apriltag placement close to the camera
