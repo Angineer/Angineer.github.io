@@ -331,23 +331,40 @@ There were a number of latent bugs in the system that I had never gotten around 
 - Enable dispensing from both of the slots in the dispenser
 
 #### Aug 9, 2020
-Today I built out the entire track using my reflective tape. It only runs from the dining room to the living room and back, but that's enough as a proof of concept:
+Today I built out the entire track using my reflective tape. For now, it runs from the dining room to the living room and back:
 
 (image)
 
 I also spent some time tidying up the code. Now, both the mobile platform and base station programs are running as systemd services that will start when the computers boot up, so I don't have to log in to get things running.
 
 #### Aug 15, 2020
-Birthday/baby en route!
+Today marks 6 weeks before the due date of my first child. This has been a big motivation for me to make progress on Robie this year; I'd like to call version 1.0 of this project complete before the baby gets here, since I know I'll have another project on my hands then :]
 
-Build up the box
+Today I built up a little more of the structure of the base station. Enclosing the base station doesn't accomplish much in terms of functionality, but it helps the project look more polished (which is good when it's sitting in our dining room). In previous pictures, you could see that I started using 1/4" plywood to enclose the base, but I don't have any available right now, so I'm using some foam-core posterboard. I think it looks pretty good:
 
-Issues with apriltag placement close to the camera
+(image)
 
-Issues with lack of shielding for servo--he's just nervous
+One undesirable side effect of enclosing the station is that the apriltag marking the station is now very close to Robie when he drives by. He has to be close in order for the dispensed items to fall onto his head, but it makes it very difficult for his camera to catch the tag. So he will often just drive right past when he's on a return trip. I'm going to have to brainstorm this one a little bit. I have a couple ideas, but I'm not sure which one is best.
+
+I also took a little time to move Robie's internal wiring around so that I can put the battery inside and just expose a power switch on the outside (the keyswitch that I was using a few years back has since been removed, since it was kind of bulky). However, when I did this, the "eyeball" servo that moves the ultrasonic ranger stopped working. I thought that maybe I had knocked something loose, but further investigation revealed that the noise from the drive motors was simply too much for the servo, and the previous arrangement of the wires had been shielding it. I'll have to add some new shielding to eliminate this.
+
+I realize now that this electrical noise must be the reason that the eyeball servo has been so jittery during normal operation. I actual kind of like the jitter because it makes Robie seem a little neurotic, which gives him character.
 
 #### Aug 16, 2020
-Introduction of auto-docking
+I attempted to solve the too-close apriltag issue by adding what I call "auto-docking":
+- The base will be placed on a corner of the track, which will allow Robie to drive past it and align his longitudinal axis with the dispenser chute
+- After a few inches, Robie will see an apriltag to indicate that he is in position
+- Robie will drive directly backwards a pre-programmed amount so that he ends up right next to the base
+- When he starts the next order, he will drive forward by the same amount to get back onto the track
+- He will proceed as usual
+
+Here is a video:
+
+(video)
+
+Since Robie is essentially driving "blind" during the auto-docking, I wasn't sure if it would work at all. However, the short distance and the current quality of the line-following setup seem to be sufficient. I'm pretty happy with how it worked out.
+
+One other issue with driving blind is that Robie doesn't detect or stop for obstacles. Also, driving the motors in reverse requires a minimum voltage for the H-bridge chip, which translates into a minimum speed for the motors that is higher than his programmed forward speed. The result is that Robie basically just slams on the gas when he performs this maneuever and will drive straight into anything in his way. It's a little nerve-wracking (I know he's a relatively tiny robot, but still) and we'll just have to see if this causes any issues via testing.
 
 #### Aug 21, 2020
 Done?!
