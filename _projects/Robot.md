@@ -2,14 +2,30 @@
 title:  "Service Robot"
 status: ongoing
 pictures:
-    - https://www.dropbox.com/s/b1wpww1ykkzr58a/2020-02-08%2016.23.46.jpg?raw=1
-    - https://www.dropbox.com/s/1fnnpzlmy7ah7ik/2020-02-08%2016.23.33.jpg?raw=1
-    - https://www.dropbox.com/s/2qmq8nfte1d4tut/2020-02-23%2017.54.55.jpg?raw=1
-    - https://www.dropbox.com/s/tkv8kfpykya8f1e/2020-02-27%2022.03.21.jpg?raw=1
-    - https://www.dropbox.com/s/4bgf9j9cu7gprvc/2020-05-19%2022.41.46.jpg?raw=1
-    - ?raw=1
-    - ?raw=1
-    - ?raw=1
+    - https://www.dropbox.com/s/nnoe8ebgpx6ln9p/IMG_1846.JPG?raw=1 # 0: Ultrasonic mount iterations
+    - https://www.dropbox.com/s/0yjoa0dq2wln5y4/IMG_1847.JPG?raw=1 # 1: Finished ultrasonic mount
+    - https://www.dropbox.com/s/13xoa62tic5zow4/20140412_160332.jpg?raw=1 # 2: New chassis assembly
+    - https://www.dropbox.com/s/g78n932z4nfofzt/20140412_184307.jpg?raw=1 # 3: Soldered h-bridge circuit
+    - https://www.dropbox.com/s/cpw0ju42lggnvik/20150112_182901.jpg?raw=1 # 4: Steering from side
+    - https://www.dropbox.com/s/xnq1unshz3mgmm9/20150313_221837.jpg?raw=1 # 5: Steering from bottom
+    - https://www.dropbox.com/s/sj9j8o3u9jror7o/20150313_221751.jpg?raw=1 # 6: Exploded chip
+    - https://www.dropbox.com/s/1uzkoqtfuras2zt/20150729_192640.jpg?raw=1 # 7: Melted steering
+    - https://www.dropbox.com/s/iu8hq9usn5t08x0/20160328_202600.jpg?raw=1 # 8: New caster
+    - https://www.dropbox.com/s/qgo03k5usk5yvcm/2018-07-03%2019.40.22%20HDR.jpg?raw=1 # 9: Basement workshop
+    - https://www.dropbox.com/s/m6vat6btrr8g33l/2018-07-03%2020.23.28.jpg?raw=1 # 10: Base frame
+    - https://www.dropbox.com/s/pq0iw88dietisi5/2018-08-12%2008.25.10.jpg?raw=1 # 11: Cable management
+    - https://www.dropbox.com/s/oilfota2amt55p4/2018-08-12%2008.25.55.jpg?raw=1 # 12: Mounted line-follower board
+    - https://www.dropbox.com/s/gjut6rv163sg2uj/2019-07-07%2010.39.06.jpg?raw=1 # 13: Conveyors 1
+    - https://www.dropbox.com/s/b3y5j99b9a71suh/2019-07-07%2010.40.08.jpg?raw=1 # 14: Conveyors 2
+    - https://www.dropbox.com/s/b1wpww1ykkzr58a/2020-02-08%2016.23.46.jpg?raw=1 # 15: Base components attached
+    - https://www.dropbox.com/s/1fnnpzlmy7ah7ik/2020-02-08%2016.23.33.jpg?raw=1 # 16: Chute assembly 1
+    - https://www.dropbox.com/s/2qmq8nfte1d4tut/2020-02-23%2017.54.55.jpg?raw=1 # 17: Line design
+    - https://www.dropbox.com/s/tkv8kfpykya8f1e/2020-02-27%2022.03.21.jpg?raw=1 # 18: Chute assembly 2
+    - https://www.dropbox.com/s/4bgf9j9cu7gprvc/2020-05-19%2022.41.46.jpg?raw=1 # 19: Apriltag @ home
+    - https://www.dropbox.com/s/sf35d4521c8t3bt/2020-07-12%2019.25.27.jpg?raw=1 # 20: Masking tape track
+    - https://www.dropbox.com/s/cveum5eirwefa4n/2020-08-09%2013.11.34.jpg?raw=1 # 21: Track at base
+    - https://www.dropbox.com/s/p2v4cvzusscpnjk/2020-08-09%2013.11.53.jpg?raw=1 # 22: Track at coffee table
+    - https://www.dropbox.com/s/0t5ucwtsbavpfrt/2020-08-15%2023.04.01.jpg?raw=1 # 23: Enclosed base
 ---
 
 This is a butler-style robot that takes orders for food and drink and delivers them to you.
@@ -93,9 +109,12 @@ I called the fellow and arranged a time to swing by. He lived in a trailer towar
 
 Around the same time, I bought some motor driver circuit components and got the motors spinning via an Arduino. Because one of the goals of the project was to build things from scratch and avoid kits, I chose to buy an L298 H-bridge chip and assemble the circuit myself on a solderless breadboard. You can see the result here:
 
-(video)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9edvnC940w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-To finish out the steering components, I pulled the wheels off an RC car and bought some steel rod and connectors at--you guessed it--McGuckins. A little assembly and the robot was finally on the move: [the steel box design](https://youtu.be/j0Zf290-C6U). As you can probably tell, the steering hardware was pretty shoddy at this point. I think it's safe to describe it as a "learning experience."
+To finish out the steering components, I pulled the wheels off an RC car and bought some steel rod and connectors at--you guessed it--McGuckins. A little assembly and the robot was finally on the move:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j0Zf290-C6U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+As you can probably tell, the steering hardware was pretty shoddy at this point. I think it's safe to describe it as a "learning experience."
 
 One main issue I ran into during this phase was the weight of the robot. The steel box and lead acid battery put some real strain on the drive motors and steering hardware. Once again, McGuckins came to my rescue in the form of a new chassis, which was a plastic box. In addition to being much lighter than the steel one, this box allows you to see what's happening inside, which is kind of cool.
 
@@ -105,35 +124,43 @@ I wanted to mount the ultrasonic ranger to one of the servos so that the robot c
 
 This was the first time that I used a 3D printer and--let me tell you--it was truly exhilarating. You might think I'm exaggerating, but I really was so excited by this interaction that I couldn't stop thinking about it for the next couple weeks. There was just so much power in the notion that I could imagine a part in my head, design it in CAD, and have a prototype on my desk within hours. It also was one of the first new skills that I learned from a fellow member at SSD. I have come to believe very strongly in the importance of sharing our skills and knowledge with others, and this experience is at the heart of it.
 
-After a few iterations, the ultrasonic ranger was mounted and [ready to go](/projects/3DPrintedParts.html#servo-mount).
+After a few iterations, the ultrasonic ranger was mounted and ready to go:
+
+{% include img_h.html idx=0 %}
+{% include img_h.html idx=1 %}
 
 #### April 24, 2014
 Over the last couple years, I've more involved with SSD and got distracted by other projects, such as my [binary clock](/projects/BinaryClock.html). But now I'm finally getting back into working on the robot. The 2 areas I'm focused on right now are redoing the steering hardware and finalizing the circuitry. Now that I have access to 3D printing, I'm going to try to build a more-polished steering system that uses the same basic design as the old one.
 
 Here are a couple pics of testing the motor driver circuit and (finally) soldering it to a real circuit board:
 
-![](/pictures/MotorTest.png)
-![](/pictures/PCBMotorCircuit.png)
+{% include img_h.html idx=2 %}
+{% include img_v.html idx=3 %}
 
 #### March 13, 2015
 Although I haven't posted about the robot in some time, I've been making some small progress in the last year. Mostly, I've 3D printed the new steering assembly:
 
-![](/pictures/Steering1.png)
-![](/pictures/Steering2.png)
+{% include img_v.html idx=4 %}
+{% include img_h.html idx=5 %}
 
 Currently, it's really a piece of crap, but I am trying to just get the robot back up and running again, then I will work on fine tuning things. In addition, I recently undid the progress in my last post by blowing up the motor driver chip. So now I'm in the process of buying and resolding that circuit. It's a pain when you do something so dumb, but I guess that's part of learning:
 
-![](/pictures/Whoops.png)
+{% include img_v.html idx=6 %}
 
 In general, things are coming together, even with the setbacks, and I think that the robot will be driving again pretty soon.
 
 #### April 28 2015
-As promised, it is working again: [Robot Test](https://youtu.be/zMsPi7ghxFU).
+As promised, it is working again:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zMsPi7ghxFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I rewired the driver circuit and hooked up the two servos, plus I did some organizing of components in the box and added some strain reliefs. I also included a key switch, so you have to have the keys to turn it on (and off). I also bought a battery charger so I can have some extended testing sessions without worrying about draining it down too low for long periods at a time.
 
 #### July 26, 2015
-More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA steering assembly will melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime. In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.
+More setbacks recently: I left the robot in the car when I was at work one day and learned that the PLA steering assembly will melt even in moderate temperatures. So I'm going to have to find a long term solution and print a new one in the meantime.
+
+{% include img_v.html idx=7 %}
+
+In addition, I hooked up all the motors and sensors in the box and started testing only to find out that somewhere along the line, I didn't check my circuitry closely enough. When the DC motors were turning, it caused noise in the servo power that made them jitter like crazy.
 
 I have overcome the power issue by rearranging how I ran the power through the system. I originally had a switching voltage rectifier to bring the 12V battery down to 6V, which I was going to use to power the servos and the Arduino. I added a lot of capacitors at various points throughout to try to eliminate the noise in that circuit, but couldn't beat it. It then occurred to me to try to run the 12V directly into the Arduino, then run the servos off the Arduino's 5V pin. As it turns out, that was exactly what I needed.
 
@@ -156,9 +183,10 @@ Since the last update, I brought the robot to a local hackerspace and a [maker p
 
 I thought it was fun designing and building the steering, but in order to keep things moving forward, I replaced the assembly with a simple caster:
 
-![](/pictures/Steering3.png)
+{% include img_h.html idx=8 %}
 
-While making the code update to implement the new steering, I also changed the algorithm a little. Before, any object caused the robot to back up and turn a specific amount; I added randomness by changing directions when there were no obstacles detected. Now, the amount of time that robot backs up is random, so, after he avoids an obstacle, the new direction he faces is never the same: [New Algorithm](https://youtu.be/w-Gu0EnD35M)
+While making the code update to implement the new steering, I also changed the algorithm a little. Before, any object caused the robot to back up and turn a specific amount; I added randomness by changing directions when there were no obstacles detected. Now, the amount of time that robot backs up is random, so, after he avoids an obstacle, the new direction he faces is never the same:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w-Gu0EnD35M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Summer 2017
 Since my last post, the robot has been on hold for a little bit while I've been in school getting my master's degree in [Robotic Systems Development](https://mrsdprojects.ri.cmu.edu/2016teami/). Now that I'm on summer break, I can devote some time to it again. And, luckily, this means that I can apply some of my new skills to this project. 
@@ -191,7 +219,10 @@ Here's the full base design with the robot parked in charging position:
 
 ![](/pictures/Robot_BaseFull.png)
 
-The current mobile platform design uses line-following for navigation throughout the house. I purchased a [line-follower array from Sparkfun](https://www.sparkfun.com/products/13582) and added it to the Robot--[here](https://www.youtube.com/watch?v=50ZuVvZ7mBI) is a short clip of my initial testing. I still need to make a permanent fixture to attach it to the chassis, as it is currently attached with duct tape.
+The current mobile platform design uses line-following for navigation throughout the house. I purchased a [line-follower array from Sparkfun](https://www.sparkfun.com/products/13582) and added it to the Robot. Here is a short clip of my initial testing:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/50ZuVvZ7mBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I still need to make a permanent fixture to attach it to the chassis, as it is currently attached with duct tape.
 
 I've been running behind schedule a little bit, but I think the project is still on track. Most of the delay is due to postponing component purchases until I have more stability in my day job. Regardless, since adding a work breakdown structure, it has been much easier to keep tabs on my progress and stay abreast of how the project is going overall.
 
@@ -212,11 +243,11 @@ Now things are running pretty smoothly. I can connect to the HTTP server from my
 #### Jul 3, 2018
 We moved into a new place so I've been setting up my workshop:
 
-![](/pictures/Robot_Workshop.png)
+{% include img_h.html idx=9 %}
 
 I've got a lot more room to build, which has helped me make good progress on the home base portion of the project:
 
-![](/pictures/Robot_BaseFrame.png)
+{% include img_v.html idx=10 %}
 
 You can see one of the conveyer belts that I purchased sitting on top, roughly where it will be when the base is done.
 
@@ -227,24 +258,26 @@ I did some light research and discussed the idea with my electrical engineer fri
 
 The basic wiring of the mobile platform had always been very messy and fragile, so I decided to reorganize. I'm most of the way done and it's looking much better:
 
-![](/pictures/Robot_NewWiring.png)
+{% include img_h.html idx=11 %}
 
 You can also see that I've mounted my line-following board on the bottom of the bot:
 
-![](/pictures/Robot_LineFollowerMounted.png)
+{% include img_h.html idx=12 %}
 
 #### Jul 7, 2019
 Although I haven't been posting here, I've made a number of updates in the last few months.
 
 First, I did some machining and assembly of the base station. The main takeaway is that typical consumer plastics are difficult to machine. In particular, I had a hard time drilling out the center of the spindles in my conveyor belts. The results are accurate enough to work with, but I may have to redo them (probably a 3D print) in the future. I also tweaked the design a little and used some threaded rod to hold the conveyors together. Here are a couple pictures of what I have so far:
 
-![](/pictures/Robot_Conveyors_1.png) ![](/pictures/Robot_Conveyors_2.png)
+{% include img_h.html idx=13 %}
+{% include img_h.html idx=14 %}
 
 Second, I've done some work on the coding side. I rearranged things a little bit to update the style and also to make everything more modular. The coolest addition is Bluetooth communication between the Raspberry Pis; now the base and the mobile platform can communicate with each other. You can see the updates on my [Github](https://github.com/Angineer) page.
 
 I'm particularly happy with how the bluetooth worked out because it's integrated into my existing client/server library. Now users just need to select which type of socket they want to use (IP or Bluetooth) when they connect. The rest works exactly the same way. Pretty slick!
 
-The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video: [Ordering System](https://youtu.be/Y87iaBGqlAw).
+The end result is that the ordering system is somewhat functional. You can see all the pieces working together in this video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y87iaBGqlAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Jan 26, 2020
 Every year, I set new year's resolutions, and I have included finishing the robot project every year for the last 7 years. Last year I felt pretty good about being able to finish everything, since I did a lot of the systems engineering work and had a good idea of what I was trying to accomplish. I made good progress, but still wasn't able to wrap it up. So I'm trying again this year.
@@ -267,11 +300,11 @@ I've taken the robot to my local hackerspace, [HackPGH](https://www.hackpgh.org)
 
 In transporting the components, I realized that they are pretty susceptible to damage from movement, so today I started out by attaching the circuitry to the base of the dispenser:
 
-{% include img_h.html idx=0 %}
+{% include img_h.html idx=15 %}
 
 Then, I cut out and attached some parts of the chute where food will fall when it is dispensed:
 
-{% include img_v.html idx=1 %}
+{% include img_v.html idx=16 %}
 
 #### Feb 15, 2019
 The apriltag processing components are pretty slow, to the point that I'm not sure if they will be reliable in the final product. So today, I went back to the image processing and tried to implement some optimizations. The actual processing side of things (i.e. not the `raspistill` process) is now split out into two components. One pings the camera to request a new image, then uses ionotify to wait for the image to be written to disk and reads it into memory. The other object waits for the first one to read a new image, grabs it, and does the apriltag detection.
@@ -283,7 +316,7 @@ The focus today was on getting the line following working well so I can lay down
 
 I started by testing dark blue painter tape directly on the floor, but it didn't work too well. I learned that the floor, while being light in color, is acutally pretty absorptive with the IR light. Next, I tried printing out some black lines on white paper and taping them to the floor with masking tape:
 
-{% include img_h.html idx=2 %}
+{% include img_h.html idx=17 %}
 
 Next I tried inverting the hardware to look for a light-colored line and using reflective tape:
 
@@ -298,12 +331,12 @@ The other thing I learned today is that the width of the line is important. If i
 #### Feb 27, 2020
 I added some more components to the chute. It's starting to look pretty good:
 
-{% include img_v.html idx=3 %}
+{% include img_v.html idx=18 %}
 
 #### May 19, 2020
 Just as soon as I started working on the robot at HackPGH, the global coronavirus pandemic hit, and I had to move operations back home. Since I was stuck at home with extra time on my hands, I decided to dive into the issue of the slow apriltag processing:
 
-(image)
+{% include img_h.html idx=19 %}
 
 My first attempt at this was to create a stripped-down verison of raspistill. I didn't know much about the underlying libraries (primarily MMAL), so it was difficult and slow-going. After spending a few days on this, I decided to take a different approach: instead of using just a few components from raspistill, I would compile it as a library and slightly modify the objects so they could be called from my c++ program.
 
@@ -312,7 +345,7 @@ Success! After a couple months of slogging though the camera capture code, I hav
 
 Robie is now set up in the basement on a test track of masking tape:
 
-(image)
+{% include img_h.html idx=20 %}
 
 This is the closest that Robie has felt to completion and it's satisfying to run a full order through the system.
 
@@ -333,7 +366,8 @@ There were a number of latent bugs in the system that I had never gotten around 
 #### Aug 9, 2020
 Today I built out the entire track using my reflective tape. For now, it runs from the dining room to the living room and back:
 
-(image)
+{% include img_v.html idx=21 %}
+{% include img_v.html idx=22 %}
 
 I also spent some time tidying up the code. Now, both the mobile platform and base station programs are running as systemd services that will start when the computers boot up, so I don't have to log in to get things running.
 
@@ -342,7 +376,7 @@ Today marks 6 weeks before the due date of my first child. This has been a big m
 
 Today I built up a little more of the structure of the base station. Enclosing the base station doesn't accomplish much in terms of functionality, but it helps the project look more polished (which is good when it's sitting in our dining room). In previous pictures, you could see that I started using 1/4" plywood to enclose the base, but I don't have any available right now, so I'm using some foam-core posterboard. I think it looks pretty good:
 
-(image)
+{% include img_v.html idx=23 %}
 
 One undesirable side effect of enclosing the station is that the apriltag marking the station is now very close to Robie when he drives by. He has to be close in order for the dispensed items to fall onto his head, but it makes it very difficult for his camera to catch the tag. So he will often just drive right past when he's on a return trip. I'm going to have to brainstorm this one a little bit. I have a couple ideas, but I'm not sure which one is best.
 
