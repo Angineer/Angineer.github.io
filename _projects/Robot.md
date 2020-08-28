@@ -26,6 +26,7 @@ pictures:
     - https://www.dropbox.com/s/cveum5eirwefa4n/2020-08-09%2013.11.34.jpg?raw=1 # 21: Track at base
     - https://www.dropbox.com/s/p2v4cvzusscpnjk/2020-08-09%2013.11.53.jpg?raw=1 # 22: Track at coffee table
     - https://www.dropbox.com/s/0t5ucwtsbavpfrt/2020-08-15%2023.04.01.jpg?raw=1 # 23: Enclosed base
+    - https://www.dropbox.com/s/3e2e2141bn7u5q4/2020-08-27%2022.40.21.jpg?raw=1 # 24: Power switch
 ---
 
 This is a butler-style robot that takes orders for food and drink and delivers them to you.
@@ -382,25 +383,46 @@ One undesirable side effect of enclosing the station is that the apriltag markin
 
 I also took a little time to move Robie's internal wiring around so that I can put the battery inside and just expose a power switch on the outside (the keyswitch that I was using a few years back has since been removed, since it was kind of bulky). However, when I did this, the "eyeball" servo that moves the ultrasonic ranger stopped working. I thought that maybe I had knocked something loose, but further investigation revealed that the noise from the drive motors was simply too much for the servo, and the previous arrangement of the wires had been shielding it. I'll have to add some new shielding to eliminate this.
 
-I realize now that this electrical noise must be the reason that the eyeball servo has been so jittery during normal operation. I actual kind of like the jitter because it makes Robie seem a little neurotic, which gives him character.
+I realize now that this electrical noise must be the reason that the eyeball servo has been so jittery during normal operation. I actually kind of like the jitter because it makes Robie seem a little neurotic, which gives him character.
 
 #### Aug 16, 2020
 I attempted to solve the too-close apriltag issue by adding what I call "auto-docking":
 - The base will be placed on a corner of the track, which will allow Robie to drive past it and align his longitudinal axis with the dispenser chute
 - After a few inches, Robie will see an apriltag to indicate that he is in position
 - Robie will drive directly backwards a pre-programmed amount so that he ends up right next to the base
-- When he starts the next order, he will drive forward by the same amount to get back onto the track
-- He will proceed as usual
+- When he starts the next order, he will drive forward by the same amount to get back onto the track and then proceed as normal
 
 Here is a video:
 
-(video)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UcPNjS-Ez5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Since Robie is essentially driving "blind" during the auto-docking, I wasn't sure if it would work at all. However, the short distance and the current quality of the line-following setup seem to be sufficient. I'm pretty happy with how it worked out.
 
-One other issue with driving blind is that Robie doesn't detect or stop for obstacles. Also, driving the motors in reverse requires a minimum voltage for the H-bridge chip, which translates into a minimum speed for the motors that is higher than his programmed forward speed. The result is that Robie basically just slams on the gas when he performs this maneuever and will drive straight into anything in his way. It's a little nerve-wracking (I know he's a relatively tiny robot, but still) and we'll just have to see if this causes any issues via testing.
+One other issue with driving blind is that Robie doesn't detect or stop for obstacles. Also, driving the motors in reverse requires a minimum voltage for the H-bridge chip, which translates into a minimum speed for the motors that is higher than his programmed forward speed. The result is that Robie basically just slams on the gas when he performs this maneuever and will drive straight into anything in his way. It's a little nerve-wracking and we'll just have to see if this causes any issues via testing.
 
 #### Aug 21, 2020
-Done?!
+I think the time has finally come to wrap up Version 1 of this project. There are just a couple minor updates left:
+- Add a better power switch
+- 3D print new conveyer spindles
 
-Note: have to collect all my pictures and put them in the folder
+There are some other big ideas that might be fun to pursue, but I don't plan on tackling them any time soon. I'll save them for when I'm ready to build Robie Version 2:
+- Auto charging at base station
+- Extra base station slots
+- Navigation that doesn't require as much infrastructure
+
+#### Aug 27, 2020
+A bought a new power switch from Sparkfun that arrived in the mail today. I installed the switch and soldered it up; Robie's looking good:
+
+{% include img_v.html idx=24 %}
+
+As I wrap up version 1, it's interesting to step back and reflect on this project. I've been working on it for almost a decade, so it's almost hard to remember a time when I wasn't working on it.
+
+The main lesson I've learned might be that robots are complex. To an outside observer, Robie might look simplistic and silly. He can't even navigate his environment without an intrusive amount of infrastructure. How could this take someone 10 years of effort? Upon further inspection, Robie has a lot of components, each of which requires design, planning, manufacturing, coding, and testing. Mastering each of these domains takes a lot of time; mastering all of them is a lifelong endeavor.
+
+Along those same lines, I intentionally stayed away from kits because I wanted Robie to be a learning experience, but that has certainly contributed to the length of the project. I could have easily bought a robot with lots of bells and whistles that was more impressive than Robie right out of the box. But that would have obscured the details of how it all worked. Saving time and effort would have also cut back on first hand learning and experimentation. This hearkens back to the systems engineering principles that I discussed in the design above: the only way to know if you've truly accomplished your goals is to clearly express them before you begin. For Robie, I did want to create a functioning robot, but I also wanted to explore as I went. Discovering the build vs buy tradeoffs was all part of the plan.
+
+One thing that is clear in retrospect is how my skills and attention have evolved over the course of the project. When I started, I was an undergraduate student pursuing mechanical engineering. Since then, I have been a member of 3 hackerspaces, learned multiple coding languages, worked in a heavy manufacturing environment, and received a master's degree in robotic systems. As I moved through these different phases of life, I have shifted my attention between Robie's hardware, software, and systems components. Every time I learn a new skill, it tends to show up as an upgrade in this project.
+
+Sometimes I have been very focused on the robot, while at other times I've let my attention wax and wane. Do I wish that I had done it differently? It's hard to say. I'm happy with what I've accomplished and the skills I've learned.
+
+Robie reminds me of the [trebuchet](/projects/Trebuchet.html) project because they have both been such integral parts of my life, acting as major milestones in my story. Finishing it is truly like closing a chapter.
