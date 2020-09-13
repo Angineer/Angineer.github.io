@@ -1,5 +1,5 @@
 ---
-title:  "Service Robot"
+title:  "Robot Butler"
 status: ongoing
 pictures:
     - https://www.dropbox.com/s/pd5qj0isuxc7yb9/Steering%20Diagram.jpg?raw=1 # 0: Steering sketch

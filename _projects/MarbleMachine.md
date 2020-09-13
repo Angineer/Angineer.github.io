@@ -1,6 +1,6 @@
 ---
 title:  "Marble Machine"
-status: ongoing
+status: "on hold"
 ---
 
 This is a project I worked on for Build18 at CMU with my friend Matt and couple other graduate students. It is a machine that plays songs on a xylophone by dropping marbles on it. It was inspired by the famous machine built by Wintergatan.

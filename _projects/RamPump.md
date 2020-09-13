@@ -1,6 +1,6 @@
 ---
 title:  "Ram Pump"
-status: ongoing
+status: "on hold"
 ---
 
 A ram pump moves water uphill using only gravitational energy (no gas or electricity). They were popular devices in the US in the mid-1800s; my great-grandfather used one when he was growing up. I learned about them when I was in college and wanted to build a demonstration.
