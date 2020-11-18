@@ -10,3 +10,5 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+
+permalink: /:basename
