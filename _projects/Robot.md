@@ -1,6 +1,6 @@
 ---
 title:  "Robot Butler"
-status: ongoing
+status: complete
 pictures:
     - https://www.dropbox.com/s/pd5qj0isuxc7yb9/Steering%20Diagram.jpg?raw=1 # 0: Steering sketch
     - https://www.dropbox.com/s/nnoe8ebgpx6ln9p/IMG_1846.JPG?raw=1 # 1: Ultrasonic mount iterations
@@ -28,6 +28,8 @@ pictures:
     - https://www.dropbox.com/s/p2v4cvzusscpnjk/2020-08-09%2013.11.53.jpg?raw=1 # 23: Track at coffee table
     - https://www.dropbox.com/s/0t5ucwtsbavpfrt/2020-08-15%2023.04.01.jpg?raw=1 # 24: Enclosed base
     - https://www.dropbox.com/s/3e2e2141bn7u5q4/2020-08-27%2022.40.21.jpg?raw=1 # 25: Power switch
+    - https://www.dropbox.com/s/v1gskz7b9mixoug/2020-09-11%2018.34.10.jpg?raw=1 # 26: Conveyor spindle
+    - https://www.dropbox.com/s/5obbrmgxzqe1x45/2020-09-12%2009.11.33.jpg?raw=1 # 27: Conveyor duct tape
 ---
 
 This is a butler-style robot that takes orders for food and drink and delivers them to you.
@@ -427,3 +429,17 @@ One thing that is clear in retrospect is how my skills and attention have evolve
 Sometimes I have been very focused on the robot, while at other times I've let my attention wax and wane. Do I wish that I had done it differently? It's hard to say. I'm happy with what I've accomplished and the skills I've learned.
 
 Robie reminds me of the [trebuchet](/projects/Trebuchet.html) project because they have both been such integral parts of my life, acting as major milestones in my story. Finishing it is truly like closing a chapter.
+
+#### Nov 24, 2020
+Version 1 is complete!
+
+To try to combat the noise from the drive motors that was affecting the eyeball servo, I just twisted the signal wires for the servo. It's not 100% effective, but it seems to do a decent job.
+
+For the conveyor spindles, I tried to print my own replacements, but the 3D printers at my hackerspace were all out of commission, so I ended up ordering them through a shop on Etsy, [SuperHeroDIY](https://www.etsy.com/shop/SuperheroDIY). They were great quality. The only issue was that the plastic was too slippery to drive the conveyor belts. A little bit of duct tape came to my rescue:
+
+{% include img_h.html idx=26 %}
+{% include img_v.html idx=27 %}
+
+So, finally, here is a video of the entire system:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rRqIBj6cinI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
