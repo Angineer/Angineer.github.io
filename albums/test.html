@@ -1,42 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <title>Test Album</title>
-    <style type="text/css">
-        html, body {
+    <meta charset="utf-8">
+    <title>Album</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- do not cache this page -->
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+
+    <style>
+        .staticrypt-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .staticrypt-form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            
+        }
+
+        .staticrypt-form input {
+            outline: 0;
+            background: #f2f2f2;
             width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
         }
-        h1 {
-            text-align: center;
-        }
-        table {
-            margin: 0 auto;
-        }
-        td {
-            padding: 50px;
-        }
-        p {
-            text-align: center;
+
+        .staticrypt-form .staticrypt-decrypt-button {
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-    <h1>Test Album</h1>
-    <table>
-        <tr>
-            <td>
-                <a href="https://www.dropbox.com/s/a0zfz72wr05k4fm/2018-10-06%2011.34.45%20HDR.jpg?raw=1">
-                    <img src="https://www.dropbox.com/s/a0zfz72wr05k4fm/2018-10-06%2011.34.45%20HDR.jpg?raw=1" width=300px>
-                </a>
-                <p>Rocky, just chilling.</p>
-            </td>
-            <td>
-                <a href="https://www.dropbox.com/s/0yjoa0dq2wln5y4/IMG_1847.JPG?raw=1">
-                    <img src="https://www.dropbox.com/s/0yjoa0dq2wln5y4/IMG_1847.JPG?raw=1" width=300px>
-                </a>
-                <p>A doodad</p>
-            </td>
-        </tr>
-    </table>
+<div class="staticrypt-page">
+    <div class="staticrypt-form">
+        <form id="staticrypt-form" action="#" method="post">
+            <input id="staticrypt-password"
+                   type="password"
+                   name="password"
+                   placeholder="passphrase"
+                   autofocus/>
+
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+
+</div>
+
+<!-- Self-hosted copy of crypto-js -->
+<script src="https://www.adtme.com/resources/crypto-js.min.js"></script>
+
+<script>
+    /**
+     * Decrypt a salted msg using a password.
+     * Inspired by https://github.com/adonespitogo
+     */
+    var keySize = 256;
+    var iterations = 1000;
+    function decrypt (encryptedMsg, pass) {
+        var salt = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
+        var iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(32, 32))
+        var encrypted = encryptedMsg.substring(64);
+
+        var key = CryptoJS.PBKDF2(pass, salt, {
+            keySize: keySize/32,
+            iterations: iterations
+        });
+
+        var decrypted = CryptoJS.AES.decrypt(encrypted, key, {
+            iv: iv,
+            padding: CryptoJS.pad.Pkcs7,
+            mode: CryptoJS.mode.CBC
+        }).toString(CryptoJS.enc.Utf8);
+        return decrypted;
+    }
+
+    document.getElementById('staticrypt-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var passphrase = document.getElementById('staticrypt-password').value,
+            encryptedMsg = '4c24f84e92d0232463656af21e28249ba7a67ee514c3276111b1ecb6be69004a2ce0304b2fbd7a3b6f7ef4b4309397c52beb34503d3b223fbde2311eab317d21tMQEXiYlRe7PZvJbvN8Ai6A71JMVfShT6gVImODOrqFSbvVt5ARlB/4pHIddmuLdI5Tta+CUzgpv6D21FmMitHtJNvXY0A+aX1KZlQ4F1nebRWIyaRkUqr4/5SfN/QebWttFgTlA0O10PKMUIk0KizNr7ZVyfUIXZ9kyj/HxNR/LKx96NlC6mw/nyF+LwE/shXZLKAjYlubKEeZC1vVtnzrwJzf87naIBWriRCI0v3Y6j/Mq5UD0ntEm9ezEUZTAY30vCrWT27GHntKF9W0163DB2kZqAdecU5S3+YgaegHjQaVd99CqHF9SQSOzfNxi7vHh7JF0upnqmdakA4+kfxXmz90AojttF4PKidfZcT7gSACO15PdWMj81IBHjU1B7ZsX/4Ad+Fzr3rDO95r+7PwPh9ABSZgdgP4ru+KjHPex5O9aZGmwuADkDGYPNWK0PpyVDTrORgIj44YO4ch7muQHbB1rVJ1celYbbwKvvYSW+Xj24b+ekQAfG85pWSObC3f8OUA+4D4udg2M7IJ414G2o0/FeiR/ijbA6CY7gQqIZRK/Nm4FZzb6DeHrnE0UwpbMoH4WnUfmSNOKZiQnxzpwW7lPLzBaV6cpt158zyc2gx04bBLX8/ltR2zN7LkUXrtu5NandO9UCx6q6m8rA55i/Mvla+scOOWK5gGb89Ju7c9cNNozT1YLGvneGuExrZLERUatkQ8F4t8IMa8jQZlEijooedG97Ja+RfPfU+tJypbZff8/UJejO9S/zcqliY19t0n1rdrSpHOImo7ROxS2Yr031/4RoG9eon0z1c9lQY2OBJjvrtHmuohQYnY5aupnTxobBR45sn+rFIHBh92+mXVTY/hC48j6Sv964Fap+OUAZjn7Te3/Wo8eo+brVnsnn4W1dwGJ53F12jvaqRcjl0lFjpgNi89YQ+10Y7/MGO7xxyfmxdaCZgwlnohgn3azvl7Cf6+IxLfLGYoOqXKphcWas8Fwdo0wX+Sizol16CYF4AaESu64hmIbwkRMHdEoR/17V5ftB/qcQHhTwBYeRNz0/L0ZptSQL61kDDwXHfmlgVyTeNe44z8cRwPlTBI8AYwSJ4xMWmsBm1Dlm9ajh4LW1DzML4XDdsZLA6jUsYVE+nZD+zHcuKrfS1n/tN/TF1dTtFxd9iqntJL9xjh3TTfQybMG8GxD3y5ZXsP1oyIQNlnUSIjRLupZyMk/UtYQgimAZ9TXnxuIhMU/rRWJ90Z+B64jh1AmXLqB6pO7pA9NdIMvHh+eU9yRkTyOWRs/tEhiKzzIvcWKbZh6KJ0N7bCgGqo1Gv5ZvgIlZJ4YvXZtsRH/JmLsp1r/3NcISbGW+R3+ZUrngIHuObH3nA1xTKeGFLqTXX6P8+k7071kIEX5DLSJdgcTFo+ugvewor+2nnH0jvxJIOKGR+nDZoFsmvPvTLrnAUUqjwPeXz1bwhT2OYO0p1MxCnyC9ERw',
+            encryptedHMAC = encryptedMsg.substring(0, 64),
+            encryptedHTML = encryptedMsg.substring(64),
+            decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
+
+        if (decryptedHMAC !== encryptedHMAC) {
+            alert('Bad passphrase!');
+            return;
+        }
+
+        var plainHTML = decrypt(encryptedHTML, passphrase);
+
+        document.write(plainHTML);
+        document.close();
+    });
+</script>
 </body>
 </html>
