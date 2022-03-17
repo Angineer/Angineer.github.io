@@ -34,6 +34,10 @@ td {
 	/*border: 1px solid black;*/
 }
 
+body {
+    padding: 20px;
+}
+
 .img_h {
     width: 300px;
 }
@@ -43,11 +47,12 @@ td {
 }
 
 .mainHeading {
-	padding: 0;
 }
 
 .backLink {
-	float: left;
+	position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .project {
