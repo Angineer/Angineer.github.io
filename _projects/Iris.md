@@ -10,8 +10,7 @@ pictures:
 
 My brother Ruth has spent a lot of time studying media and art in school with a strong focus on comic books. After seeing some of his artwork, I was inspired to design a comic book that we could work on together. I also recruited my good friend Rob, who has a lot of experience reading and analyzing comics.
 
-Related info:
-* [Andy's blog](https://114425.tumblr.com/) (we post pages here as we finish them)
+[Gallery](https://www.dropbox.com/scl/fo/krkjfkv5ln7du0yl5n9gp/h?rlkey=t61e2dhim9d4d0kuzrtlqg2mw&dl=0)
 
 ### Design
 The main character in our comic book is a girl named Iris. She grew up in a rural commune, so she lacks an understanding of modern society, but also has some unique experience and perspectives. The story follows her after she leaves the commune and goes off on an adventure of her own.
