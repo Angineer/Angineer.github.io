@@ -101,7 +101,7 @@ After I graduated college, I used my spare time to design and build the initial 
 
 It was pretty naive, but my goal was simply to get the robot driving around.
 
-It was around this same time that I discovered [Solid State Depot](https://boulderhackerspace.com/) (SSD), my local hackerspace. I was pretty enthralled by the awesome tools and people there. They also had raw materials, including a few scrap pieces that I used to start building my robot's steering.
+It was around this same time that I discovered [Solid State Depot](https://www.ssdmakerspace.org/) (SSD), my local hackerspace. I was pretty enthralled by the awesome tools and people there. They also had raw materials, including a few scrap pieces that I used to start building my robot's steering.
 
 The first component I worked on was the piece where the wheels attached (part B in the diagram). I found a small piece of steel, cut it into the right shapes, and drilled the holes I needed. However, SSD didn't have a set of taps at the time, so I wasn't able to add the threads I needed.
 
